@@ -1,6 +1,8 @@
 package edu.cmu.mse.aes.project1.bussiness;
 /*
  * @author: Rui Li
+ * 
+ * This class was designed to fetch httpReponse to a specific URL. 
  */
 
 import java.io.IOException;

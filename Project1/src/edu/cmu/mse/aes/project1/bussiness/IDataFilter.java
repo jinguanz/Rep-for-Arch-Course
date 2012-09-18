@@ -4,6 +4,9 @@ import java.util.ArrayList;
 
 import edu.cmu.mse.aes.project1.data.Bike;
 
+/*
+ * author： Rui LI
+ */
 public interface IDataFilter {
 	
 	//this function will be used by xml processor

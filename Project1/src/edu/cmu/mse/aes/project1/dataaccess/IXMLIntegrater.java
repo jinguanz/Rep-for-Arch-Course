@@ -1,7 +1,15 @@
 package edu.cmu.mse.aes.project1.dataaccess;
 
+/*
+ * @author:Rui Li
+ */
 public interface IXMLIntegrater {
+	/*
+	 * This method is to integrate all the xml files into a big xml file with name as the parameter 
+	 * 
+	 * 
+	 */
 	
-	public  void intergrateXMLs(String xmlFileName);
+	public  void integrateXMLs(String xmlFileName);
 
 }

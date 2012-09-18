@@ -1,5 +1,8 @@
 package edu.cmu.mse.aes.project1.data;
 
+/*
+ * @author: Rui Li
+ */
 public class Bike {
 	
 	private String manufacurer;
