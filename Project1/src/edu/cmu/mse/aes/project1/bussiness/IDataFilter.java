@@ -1,6 +1,7 @@
 package edu.cmu.mse.aes.project1.bussiness;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import edu.cmu.mse.aes.project1.data.Bike;
 
@@ -13,6 +14,6 @@ public interface IDataFilter {
 	public ArrayList<Bike> filterData(String rawData,String regx); 
 	
 	//this function will be used by DataFilter to keep filter data with can be used as the middle result
-	public ArrayList<String> filterDataForInternalUse(String rawData,String regx); 
+	public HashMap<String,String>  filterDataForInternalUse(String rawData,String regx); 
 
 }

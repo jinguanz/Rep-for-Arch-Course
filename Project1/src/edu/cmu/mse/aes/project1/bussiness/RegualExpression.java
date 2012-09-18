@@ -6,7 +6,7 @@ package edu.cmu.mse.aes.project1.bussiness;
  */
 public class RegualExpression {
 	
-	private  final String RegxForFilterLinks="";
+	public static  final String RegxForFilterLinks="";
 	
 	
 
