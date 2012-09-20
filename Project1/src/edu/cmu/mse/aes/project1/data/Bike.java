@@ -7,7 +7,7 @@ public class Bike {
 	
 	private String manufacurer;
 	private String model;
-	private double price;
+	private String price;
 	private String frameSize;
 	private String frameMaterial;
 	private String forkMaterial;
@@ -26,11 +26,11 @@ public class Bike {
 	public void setModel(String model) {
 		this.model = model;
 	}
-	public double getPrice() {
+	public String getPrice() {
 		return price;
 	}
-	public void setPrice(double price) {
-		this.price = price;
+	public void setPrice(String string) {
+		this.price = string;
 	}
 	public String getFrameSize() {
 		return frameSize;
