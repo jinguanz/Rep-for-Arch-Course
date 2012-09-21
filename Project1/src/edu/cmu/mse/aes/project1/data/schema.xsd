@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="bike">
+    <xs:complexType>
+      <xs:choice>
+        <xs:element name="brand"  type="xs:string" />
+        <xs:element name="forkmaterial" type="xs:string"  />
+        <xs:element name="framematerial" type="xs:string"  />
+        <xs:element name="framesize" type="xs:string"  />
+		<xs:element name="model" type="xs:string" />
+        <xs:element name="price" type="xs:string" />
+        <xs:element name="rating" type="xs:string"  />
+		<xs:element name="componentinfo"  />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="bikelist">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="bike" maxOccurs="unbounded" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+
+  <xs:element name="componentinfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="saddle" type="xs:string"/>
+        <xs:element name="seatpost" type="xs:string"/>
+        <xs:element name="handlebars" type="xs:string"/>
+        <xs:element name="stem" type="xs:string"/>
+        <xs:element name="headset" type="xs:string"/>
+        <xs:element name="brakeset" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="ACMEBikeList.xsl"?>
+<bike-list>
+	<bike>
+		<model>Trek Madone 6.9 SSL 2011 </model>
+		<price>230.00</price>
+		<framematerial>OCLV2 SSL Carbon</framematerial>
+		<framesize>35</framesize>
+		<forkmaterial>iron</forkmaterial>
+		<componentinfo>
+			<saddle>Bontrager inForm Race X Lite, hollow titanium rails, 146mm width</saddle>
+			<seatpost>Bontrager Ride Tuned Carbon seatmast cap, 20mm offset</seatpost>
+			<handlebars>Bontrager Race XXX Lite VR, carbon, 31.8mm</handlebars>
+			<stem>Bontrager Race XXX Lite Carbon, 7 degree, 31.8mm</stem>
+			<headset>Cane Creek AER upper, cartridge bearing lower, sealed, 1-1/8″ top, 1.5″ bottom</headset>
+			<brakeset>Shimano Dura-Ace brakes w/Shimano Dura-Ace STI levers</brakeset>
+		</componentinfo>
+		<rating>3</rating>
+	</bike>
+	<bike>
+		<model>Trek Madone 6.1 SSL 2011 </model>
+		<price>5999.00</price>
+		<framematerial>OCLV2 SSL Metal</framematerial>
+		<framesize>55</framesize>
+		<forkmaterial>steel</forkmaterial>
+		<componentinfo>
+			<saddle></saddle>
+			<seatpost></seatpost>
+			<handlebars></handlebars>
+			<stem></stem>
+			<headset></headset>
+			<brakeset></brakeset>
+		</componentinfo>
+		<rating>4</rating>
+	</bike>
+	<bike>
+		<model>Trek Madone 5.9 SSL 2011 </model>
+		<price>610.00</price>
+		<framematerial>OCLV2 SSL Carbon</framematerial>
+		<framesize>56</framesize>
+		<forkmaterial>wooden</forkmaterial>
+		<componentinfo>
+			<saddle></saddle>
+			<seatpost></seatpost>
+			<handlebars></handlebars>
+			<stem></stem>
+			<headset></headset>
+			<brakeset></brakeset>
+		</componentinfo>
+		<rating>2</rating>
+	</bike>
+</bike-list>
