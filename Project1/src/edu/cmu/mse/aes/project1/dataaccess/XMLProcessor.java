@@ -1,5 +1,6 @@
 package edu.cmu.mse.aes.project1.dataaccess;
 
+import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -32,7 +33,7 @@ public class XMLProcessor implements IXMLProcessor
 		{
 			jaxbContext = JAXBContext.newInstance("edu.cmu.mse.aes.project1.data");
 			marshaller=jaxbContext.createMarshaller();
-			fos = new FileOutputStream("/Project1/data/"+bikeList.getBike().get(0).getBrand()+".xml");
+			fos = new FileOutputStream("data"+File.separator+bikeList.getBike().get(0).getBrand()+".xml");
 			
 			marshaller.marshal(bikeList, fos);
 		}
