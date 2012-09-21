@@ -48,9 +48,9 @@ public class DataFetcher implements IDataFetcher {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			System.out.println("----------------------------------------");
-			System.out.println(responseBody);
-			System.out.println("----------------------------------------");
+//			System.out.println("----------------------------------------");
+//			System.out.println(responseBody);
+//			System.out.println("----------------------------------------");
 
 		} finally {
 			httpclient.getConnectionManager().shutdown();

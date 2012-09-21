@@ -10,9 +10,23 @@ import edu.cmu.mse.aes.project1.data.Bike;
 public class DataFilter implements IDataFilter {
 
 	@Override
-	public ArrayList<Bike> filterData(String rawData, String regx) {
+	public String filterData(String rawData, String regx) {
 		// TODO Auto-generated method stub
-		return null;
+		String target="";
+		Pattern pattern = Pattern.compile(regx);
+
+		Matcher matcher = pattern.matcher(rawData);
+		try{
+		while (matcher.find()) {
+			target=matcher.group();
+			
+		}
+		return target;
+		}
+		catch(Exception e){
+			return "";
+		}
+		
 	}
 
 	@Override

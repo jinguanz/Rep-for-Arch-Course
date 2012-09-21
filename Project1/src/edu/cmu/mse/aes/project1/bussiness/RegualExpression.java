@@ -9,8 +9,13 @@ public class RegualExpression {
 	//Such Regx will list out all the links to 20 brands like: http://bikereviews.com/road-bikes/raleigh/
 	public static  final String RegxForFilterLinks="Bikes\" href=\"http://bikereviews.com/road-bikes/(.+?)/";
 	
-	//title="2010 Raleigh Road Bikes" href="http://bikereviews.com/road-bikes/raleigh/2010-raleigh/">2010 Raleigh Road Bikes</a><br
-	public final static String regx2="Bikes\" href=\"http://bikereviews.com/road-bikes/(.+?)/\">2010";
+ 
+	//href="http://bikereviews.com/road-bikes/raleigh/2011-raleigh/" title="2011 Raleigh Road Bikes">2011 Raleigh Road Bikes</a><br
+	//href="http://bikereviews.com/road-bikes/scott/2010-scott/" title="2010 Scott Road Bikes">2010 Scott Road Bikes</a><br
+	//href="http://bikereviews.com/road-bikes/trek/2010-trek/" title="2010 Trek Road Bikes">2010 Trek Road Bikes</a><br
+	public final static String regx2="href=\"http://bikereviews.com/road-bikes/(.+?)/\" title=\"2010";
+	// Bikes" href="http://bikereviews.com/road-bikes/raleigh/2010-raleigh/">2010 Raleigh Road Bikes</a><br
+	public final static String regx2ForDumppages="href=\"http://bikereviews.com/road-bikes/(.+?)/\">2010";
 	//href="http://bikereviews.com/road-bikes/raleigh/2010-raleigh/raleigh-team-road-bike/" title="
 	public final static String regx3="href=\"http://bikereviews.com/road-bikes/(.+?)/\" title=";
 	
@@ -18,7 +23,7 @@ public class RegualExpression {
 	public final static String regxForFrameSize="/> Sizes:(.+?)<br";
 	public final static String regxForFrameMaterial="/> Frame:(.+?)<br";
 	//average: <strong>3.93</strong> out of 5)<br
-	public final static String regxForrating="average: <strong>(.+?))<br";
+	public final static String regxForrating="average: <strong>(.+?)<br";
 	//class="post-title"><h2>Raleigh Team 2010 Road Bike</h2>
 	public final static String regxForModel="class=\"post-title\"><h2>(.+?)</h2>";
 	/*Components</strong><br
