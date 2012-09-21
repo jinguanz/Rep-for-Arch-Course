@@ -57,7 +57,7 @@ public class XMLIntegrator implements IXMLIntegrator
 					JAXBContext jaxbContext = JAXBContext.newInstance("edu.cmu.mse.aes.project1.data");
 					Marshaller marshaller = jaxbContext.createMarshaller();
 					fos = new FileOutputStream(pathToIntegratedXML);
-					System.out.println("Test");
+				//	System.out.println("Test");
 					
 					marshaller.marshal(finalBikeList, fos);
 				}
