@@ -7,6 +7,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 import edu.cmu.mse.aes.project1.data.Bike;
 import edu.cmu.mse.aes.project1.dataaccess.IXMLProcessor;
+import edu.cmu.mse.aes.project1.dataaccess.XMLProcessor;
 
 public class ACMEBicyle {
 
@@ -54,19 +55,19 @@ public class ACMEBicyle {
 					String certainModelPageSource = dataFetcher
 							.doPost(currentBrand2012withSpecificModel);
 					Bike b = new Bike();
-					b.setComponentInfo(dataFileter
+					b.setComponentinfo(dataFileter
 							.filterDataForInternalUse(certainModelPageSource,
 									RegualExpression.regxForComponent).keySet()
 							.iterator().next());
-					b.setConsumerRating(dataFileter
+					b.setRating(dataFileter
 							.filterDataForInternalUse(certainModelPageSource,
 									RegualExpression.regxForrating).keySet()
 							.iterator().next());
-					b.setForkMaterial(dataFileter
+					b.setForkmaterial(dataFileter
 							.filterDataForInternalUse(certainModelPageSource,
 									RegualExpression.regxForFrameMaterial)
 							.keySet().iterator().next());
-					b.setFrameSize(dataFileter
+					b.setFramesize(dataFileter
 							.filterDataForInternalUse(certainModelPageSource,
 									RegualExpression.regxForFrameSize).keySet()
 							.iterator().next());
@@ -84,7 +85,7 @@ public class ACMEBicyle {
 			}
 			//when all the models of such brand been retrieved, call xml processor to save one xml file
 			//TBD
-			IXMLProcessor xmlprocessor=null;
+			XMLProcessor xmlprocessor= new XMLProcessor();
 			xmlprocessor.saveIntoXML(bikesforoneBrand);
 		}
 
