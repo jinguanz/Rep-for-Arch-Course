@@ -39,10 +39,10 @@ public class ACMEBicyle {
 			++count;
 			HashMap<String, String> currentBrand2010linkMap = new HashMap<String, String>();
 			if(eachBrand.contains("raleigh")||eachBrand.contains("specialized")||eachBrand.contains("cannondale")||eachBrand.contains("gary-fisher")){
-//				currentBrand2010linkMap = dataFileter
-//						.filterDataForInternalUse(
-//								dataFetcher.doPost(url + eachBrand),
-//								RegualExpression.regx2ForDumppages);
+				currentBrand2010linkMap = dataFileter
+						.filterDataForInternalUse(
+								dataFetcher.doPost(url + eachBrand),
+								RegualExpression.regx2ForDumppages);
 				
 			}
 			else currentBrand2010linkMap = dataFileter
