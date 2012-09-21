@@ -13,26 +13,35 @@ import javax.xml.bind.Marshaller;
 
 public class XMLIntegrator implements IXMLIntegrator
 {
-	public final File pathToXMLFiles = new File("/Project1/data");
-	public final File pathToIntegratedXML = new File("/Project1/data/IntegratedXML.xml");
 	@Override
 	public void integrateXMLs(String xmlFileName) 
 	{
+		//Will collect Bikelists from all XML files.
 		List<Bikelist> listOfBikeList = new ArrayList<Bikelist>();
 		
 		try
 		{
-				for (final File fileEntry : pathToXMLFiles.listFiles())
+			//Folder where all the XML files are stored.
+			File f = new File("data");
+			//Searching every xml file in the data folder.
+			for (final File fileEntry : f.listFiles())
 				{
-				    
-				    	JAXBContext context = JAXBContext.newInstance("edu.cmu.mse.aes.project1.data");
-				    	Bikelist b = (Bikelist) context.createUnmarshaller().unmarshal(fileEntry);
-				    
-				    	listOfBikeList.add(b);
+						int i = fileEntry.getName().lastIndexOf(".");
+						String extension = fileEntry.getName().substring(i+1);
+						
+				    	if(fileEntry.isFile() && !fileEntry.getName().equalsIgnoreCase("IntegratedXML.xml") && extension.equals("xml"))
+				    	{
+				    		JAXBContext context = JAXBContext.newInstance("org.example.schema");
+					    	Bikelist b = (Bikelist) context.createUnmarshaller().unmarshal(fileEntry);
+					    
+					    	listOfBikeList.add(b);
+				    	}
 				    	
 				}
-				
-				List<Bike> finalBikeList = new Bikelist().getBike();
+			
+				//A final list of bikes gathered from different bikelists.
+				Bikelist bikelistclass = new Bikelist();
+				List<Bike> finalBikeList = bikelistclass.getBike();
 				
 				//Merging bikelists from all the XML files
 				for(Bikelist bikelist:listOfBikeList)
@@ -42,9 +51,17 @@ public class XMLIntegrator implements IXMLIntegrator
 						finalBikeList.add(bike);
 					}
 				}
+				
 				//have to merge this list with list from the Integrated XML file.
-				JAXBContext context = JAXBContext.newInstance("edu.cmu.mse.aes.project1.data");
-		    	Bikelist bikeListFromIntegratedXMLFile = (Bikelist) context.createUnmarshaller().unmarshal(pathToIntegratedXML);
+				
+				JAXBContext context1 = JAXBContext.newInstance("org.example.schema");
+				f = new File("xmlfiles"+File.separator+"IntegratedXML.xml");
+				
+				Bikelist bikeListFromIntegratedXMLFile = null;
+				if(f.exists())
+					 bikeListFromIntegratedXMLFile = (Bikelist) context1.createUnmarshaller().unmarshal(f);
+				else
+					bikeListFromIntegratedXMLFile = new Bikelist();
 		    	
 		    	for(Bike bike:bikeListFromIntegratedXMLFile.getBike())
 		    	{
@@ -54,12 +71,11 @@ public class XMLIntegrator implements IXMLIntegrator
 		    	FileOutputStream fos = null;
 				try 
 				{
-					JAXBContext jaxbContext = JAXBContext.newInstance("edu.cmu.mse.aes.project1.data");
+					JAXBContext jaxbContext = JAXBContext.newInstance("org.example.schema");
 					Marshaller marshaller = jaxbContext.createMarshaller();
-					fos = new FileOutputStream(pathToIntegratedXML);
-				//	System.out.println("Test");
+					fos = new FileOutputStream("xmlfiles"+File.separator+"integratedXMLFile.xml");
 					
-					marshaller.marshal(finalBikeList, fos);
+					marshaller.marshal(bikelistclass, fos);
 				}
 				catch (IOException | JAXBException e)
 				{
@@ -81,7 +97,6 @@ public class XMLIntegrator implements IXMLIntegrator
 				
 		} 
 		catch (JAXBException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
