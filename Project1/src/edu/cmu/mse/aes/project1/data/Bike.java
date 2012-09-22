@@ -255,5 +255,15 @@ public class Bike {
     public void setComponentinfo(Object value) {
         this.componentinfo = value;
     }
+    
+    public void printinfo(){
+    	System.out.println("brand"+getBrand());
+    	System.out.println("forkmaterial"+getForkmaterial());
+    	System.out.println("framesize"+getFramesize());
+    	System.out.println("model"+getModel());
+    	System.out.println("rating"+getRating());
+    	System.out.println("componentInfo"+getComponentinfo());
+    	System.out.println("price"+getPrice());
+    }
 
 }

@@ -8,13 +8,13 @@ package edu.cmu.mse.aes.project1.bussiness;
 import java.util.ArrayList;
 import java.util.HashMap;
 import edu.cmu.mse.aes.project1.data.Bike;
+import edu.cmu.mse.aes.project1.data.Componentinfo;
+import edu.cmu.mse.aes.project1.dataaccess.XMLIntegrator;
 import edu.cmu.mse.aes.project1.dataaccess.XMLProcessor;
 
 public class ACMEBicyle {
 
-	/**
-	 * @param args
-	 */
+
 
 	private final String url = "http://bikereviews.com/road-bikes/";
 	private static HashMap<String, String> brandToURLMap = new HashMap<String, String>();
@@ -22,6 +22,7 @@ public class ACMEBicyle {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		ACMEBicyle acmeBicyle = new ACMEBicyle();
+		
 	}
 
 	ACMEBicyle() {
@@ -30,22 +31,22 @@ public class ACMEBicyle {
 
 	void init() {
 		DataFetcher dataFetcher = new DataFetcher();
-		DataFilter dataFileter = new DataFilter();
+		DataFilter dataFilter = new DataFilter();
 		String rawData = dataFetcher.doPost(url);
-		brandToURLMap = dataFileter.filterDataForInternalUse(rawData,
+		brandToURLMap = dataFilter.filterDataForInternalUse(rawData,
 				RegualExpression.RegxForFilterLinks);
 		int count=0;
 		for (String eachBrand : brandToURLMap.keySet()) {
 			++count;
 			HashMap<String, String> currentBrand2010linkMap = new HashMap<String, String>();
-			if(eachBrand.contains("raleigh")||eachBrand.contains("specialized")||eachBrand.contains("cannondale")||eachBrand.contains("gary-fisher")){
-				currentBrand2010linkMap = dataFileter
+			if(eachBrand.contains("raleigh")||eachBrand.contains("giant")||eachBrand.contains("felt")||eachBrand.contains("specialized")||eachBrand.contains("cannondale")||eachBrand.contains("gary-fisher")){
+				currentBrand2010linkMap = dataFilter
 						.filterDataForInternalUse(
 								dataFetcher.doPost(url + eachBrand),
 								RegualExpression.regx2ForDumppages);
 				
 			}
-			else currentBrand2010linkMap = dataFileter
+			else currentBrand2010linkMap = dataFilter
 					.filterDataForInternalUse(
 							dataFetcher.doPost(url + eachBrand),
 							RegualExpression.regx2);
@@ -55,7 +56,7 @@ public class ACMEBicyle {
 			for (String currentBrand2010link : currentBrand2010linkMap.keySet()) {
 
 				HashMap<String, String> currentBrand2010withModellinkMap = new HashMap<String, String>();
-				currentBrand2010withModellinkMap = dataFileter
+				currentBrand2010withModellinkMap = dataFilter
 						.filterDataForInternalUse(
 								dataFetcher.doPost(url + currentBrand2010link),
 								RegualExpression.regx3);
@@ -69,35 +70,51 @@ public class ACMEBicyle {
 					String certainModelPageSource = dataFetcher
 							.doPost(url+currentBrand2012withSpecificModel);
 					Bike b = new Bike();
-					b.setBrand(eachBrand);
-					b.setComponentinfo(dataFileter
+    				b.setBrand(eachBrand);
+
+					Componentinfo c=new Componentinfo();
+				c.setBrakeset(dataFilter.extract(certainModelPageSource, RegualExpression.regxForBrakes));
+				c.setHandlebars(dataFilter.extract(certainModelPageSource, RegualExpression.regxForHanlebar));
+				c.setHeadset(dataFilter.extract(certainModelPageSource, RegualExpression.regxForHeadSet));
+				c.setSaddle(dataFilter.extract(certainModelPageSource, RegualExpression.regxForSaddle));
+				c.setSeatpost(dataFilter.extract(certainModelPageSource, RegualExpression.regxForSeatPost));
+				c.setStem(dataFilter.extract(certainModelPageSource, RegualExpression.regxForStem));
+			
+				//b.setComponentinfo(c);
+					b.setRating(dataFilter
+							.extract(dataFilter
 							.filterData(certainModelPageSource,
-									RegualExpression.regxForComponent));
-					b.setRating(dataFileter
-							.filterData(certainModelPageSource,
-									RegualExpression.regxForrating));
-					b.setForkmaterial(dataFileter
+									RegualExpression.regxForrating),RegualExpression.regxCleanRating)+" out of 5");
+					b.setForkmaterial(dataFilter
 							.filterData(certainModelPageSource,
 									RegualExpression.regxForFrameMaterial));
-					b.setFramesize(dataFileter
-							.filterData(certainModelPageSource,
+					b.setFramesize(dataFilter
+							.extract(certainModelPageSource,
 									RegualExpression.regxForFrameSize));
-					b.setModel(dataFileter
+					b.setModel(dataFilter
+							.extract(dataFilter
 							.filterData(certainModelPageSource,
-									RegualExpression.regxForModel));
-					b.setPrice(dataFileter
+									RegualExpression.regxForModel),RegualExpression.regxCleanModel));
+					b.setPrice(dataFilter
 							.filterData(certainModelPageSource,
 									RegualExpression.regxForPrice));
+					b.setForkmaterial(dataFilter
+							.extract(certainModelPageSource,RegualExpression.regxForFork));
+					b.printinfo();
 					bikesforoneBrand.add(b);
 				}
 
 			}
 			// when all the models of such brand been retrieved, call xml
 			// processor to save one xml file
-			// TBD
-			System.out.println("for this brand, we have"+ bikesforoneBrand.size()+" bikes:"+eachBrand+"no "+count);
+			
+			System.out.println("for this brand, we have "+ bikesforoneBrand.size()+" bikes:"+eachBrand+"no "+count);
 			 XMLProcessor xmlprocessor= new XMLProcessor();
 			 xmlprocessor.saveIntoXML(bikesforoneBrand);
+			 
+			 //when all the small xml created for all the brands, integrate the xml into a big one.
+//			 XMLIntegrator xmlIntegrator=new XMLIntegrator();
+//			xmlIntegrator.integrateXMLs("hello");
 		}
 
 	}

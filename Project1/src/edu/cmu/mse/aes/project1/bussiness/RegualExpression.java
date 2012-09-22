@@ -1,4 +1,5 @@
 package edu.cmu.mse.aes.project1.bussiness;
+
 /*
  * author: Rui Li
  * 
@@ -19,13 +20,17 @@ public class RegualExpression {
 	//href="http://bikereviews.com/road-bikes/raleigh/2010-raleigh/raleigh-team-road-bike/" title="
 	public final static String regx3="href=\"http://bikereviews.com/road-bikes/(.+?)/\" title=";
 	
-	public final static String regxForPrice="";
+	//$9999."
+	//$1,099.99<br
+	public final static String regxForPrice="[" +"\\p{Sc}\u0024\u060B"+"][\\d,]+";
 	public final static String regxForFrameSize="/> Sizes:(.+?)<br";
 	public final static String regxForFrameMaterial="/> Frame:(.+?)<br";
 	//average: <strong>3.93</strong> out of 5)<br
 	public final static String regxForrating="average: <strong>(.+?)<br";
 	//class="post-title"><h2>Raleigh Team 2010 Road Bike</h2>
 	public final static String regxForModel="class=\"post-title\"><h2>(.+?)</h2>";
+	
+	public final static String regxForFork="/> Fork:(.+?)<br";
 	/*Components</strong><br
 	/> Handlebar: FSA K-Force Carbon Compact<br
 	/> Stem: FSA OS99 CSI<br
@@ -37,8 +42,27 @@ public class RegualExpression {
 	/> Grips: Raleigh Gel Tape w/SRAM White Hoods<br
 	/> Extras: Water Bottle Mounts, Cateye Reflector Set<br
 	*/
-	public final static String regxForComponent="Components</strong><br/>(.+?)<br";
-
+	public final static String regxForComponent="Components</strong>(.+?)<strong>";
+//    /> Headset: Integrated Steel Cup<br
+//    /> Brakes: Scott Pro SCBR-520 Catridge Pads<br
+//    /> Handlebar: Scott Road Drop OS Anatomic 31.8 mm<br
+//    /> H&#8217;Stem: Scott Road Team OS 1-1/8&#8243; / four Bolt 31.8 mm<br
+//    /> Seatpost: Scott Alloy 31.6mm<br
+//    /> Seat: Scott Road Team<br
+	public final static String regxForHeadSet="/> Headset: (.+?)<br";
+	public final static String regxForBrakes="/> Brakes: (.+?)<br";
+	public final static String regxForHanlebar="/> Handlebar: (.+?)<br";
+	public final static String regxForStem="/> Stem: (.+?)<br";
+	public final static String regxForSeatPost="/> Seatpost: (.+?)<br";
+	public final static String regxForSeat="/> Seat: (.+?)<br";
+	public final static String regxForSaddle="/> Saddles: (.+?)<br";
+	
+	
+	//this section of the regx are used to clean the data 
+	//modelclass="post-title"><h2>Scott CR1 Elite 2010 Road Bike</h2>
+	public final static String regxCleanModel="<h2>(.+?)<";
+	//<strong>3.53</strong> out of 5)<br
+	public final static String regxCleanRating="<strong>(.+?)</";
 	
 	
 
