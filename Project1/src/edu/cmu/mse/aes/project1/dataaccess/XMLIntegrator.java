@@ -13,6 +13,7 @@ import javax.xml.bind.Marshaller;
 
 public class XMLIntegrator implements IXMLIntegrator
 {
+	final String JAXB_CONTEXT_PACKAGE = "edu.cmu.mse.aes.project1.data";
 	@Override
 	public void integrateXMLs(String xmlFileName) 
 	{
@@ -31,7 +32,7 @@ public class XMLIntegrator implements IXMLIntegrator
 						
 				    	if(fileEntry.isFile() && !fileEntry.getName().equalsIgnoreCase("IntegratedXML.xml") && extension.equals("xml"))
 				    	{
-				    		JAXBContext context = JAXBContext.newInstance("org.example.schema");
+				    		JAXBContext context = JAXBContext.newInstance(JAXB_CONTEXT_PACKAGE);
 					    	Bikelist b = (Bikelist) context.createUnmarshaller().unmarshal(fileEntry);
 					    
 					    	listOfBikeList.add(b);
@@ -54,7 +55,7 @@ public class XMLIntegrator implements IXMLIntegrator
 				
 				//have to merge this list with list from the Integrated XML file.
 				
-				JAXBContext context1 = JAXBContext.newInstance("org.example.schema");
+				JAXBContext context1 = JAXBContext.newInstance(JAXB_CONTEXT_PACKAGE);
 				f = new File("xmlfiles"+File.separator+"IntegratedXML.xml");
 				
 				Bikelist bikeListFromIntegratedXMLFile = null;
@@ -71,7 +72,7 @@ public class XMLIntegrator implements IXMLIntegrator
 		    	FileOutputStream fos = null;
 				try 
 				{
-					JAXBContext jaxbContext = JAXBContext.newInstance("org.example.schema");
+					JAXBContext jaxbContext = JAXBContext.newInstance(JAXB_CONTEXT_PACKAGE);
 					Marshaller marshaller = jaxbContext.createMarshaller();
 					fos = new FileOutputStream("xmlfiles"+File.separator+"integratedXMLFile.xml");
 					
