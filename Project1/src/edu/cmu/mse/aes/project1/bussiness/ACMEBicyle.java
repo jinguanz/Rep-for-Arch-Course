@@ -22,13 +22,12 @@ public class ACMEBicyle {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		ACMEBicyle acmeBicyle = new ACMEBicyle();
-		XMLIntegrator xmlIntegrator=new XMLIntegrator();
-		 xmlIntegrator.integrateXMLs("hello");
+
 		
 	}
 
 	ACMEBicyle() {
-		//init();
+		init();
 	}
 
 	void init() {
@@ -82,7 +81,7 @@ public class ACMEBicyle {
 				c.setSeatpost(dataFilter.extract(certainModelPageSource, RegualExpression.regxForSeatPost));
 				c.setStem(dataFilter.extract(certainModelPageSource, RegualExpression.regxForStem));
 			
-				//b.setComponentinfo(c);
+				b.setComponentinfo(c);
 					b.setRating(dataFilter
 							.extract(dataFilter
 							.filterData(certainModelPageSource,
@@ -115,8 +114,8 @@ public class ACMEBicyle {
 			 xmlprocessor.saveIntoXML(bikesforoneBrand);
 			 
 			 //when all the small xml created for all the brands, integrate the xml into a big one.
-			 //XMLIntegrator xmlIntegrator=new XMLIntegrator();
-			 //xmlIntegrator.integrateXMLs("hello");
+			 XMLIntegrator xmlIntegrator=new XMLIntegrator();
+			 xmlIntegrator.integrateXMLs("hello");
 		}
 
 	}
