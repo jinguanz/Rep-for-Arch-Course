@@ -14,6 +14,7 @@ import javax.xml.bind.Marshaller;
 public class XMLIntegrator implements IXMLIntegrator
 {
 	final String JAXB_CONTEXT_PACKAGE = "edu.cmu.mse.aes.project1.data";
+	final String XML_FILES_FOLDER = "data";
 	@Override
 	public void integrateXMLs(String xmlFileName) 
 	{
@@ -74,7 +75,7 @@ public class XMLIntegrator implements IXMLIntegrator
 				{
 					JAXBContext jaxbContext = JAXBContext.newInstance(JAXB_CONTEXT_PACKAGE);
 					Marshaller marshaller = jaxbContext.createMarshaller();
-					fos = new FileOutputStream("xmlfiles"+File.separator+"integratedXMLFile.xml");
+					fos = new FileOutputStream(XML_FILES_FOLDER+File.separator+"integratedXMLFile.xml");
 					
 					marshaller.marshal(bikelistclass, fos);
 				}

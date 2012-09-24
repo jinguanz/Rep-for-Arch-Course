@@ -11,7 +11,7 @@
 		<xs:element name="model" type="xs:string" />
         <xs:element name="price" type="xs:string" />
         <xs:element name="rating" type="xs:string"  />
-		<xs:element name="componentinfo"  />
+		<xs:element ref="componentinfo" />
       </xs:choice>
     </xs:complexType>
   </xs:element>
