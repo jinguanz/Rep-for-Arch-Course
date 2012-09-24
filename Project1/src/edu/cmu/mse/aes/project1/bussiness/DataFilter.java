@@ -29,6 +29,26 @@ public class DataFilter implements IDataFilter {
 		
 	}
 
+	public String extract(String rawData, String regx) {
+		// TODO Auto-generated method stub
+		String target="";
+		Pattern pattern = Pattern.compile(regx);
+
+		Matcher matcher = pattern.matcher(rawData);
+		try{
+		while (matcher.find()) {
+			target=matcher.group(1);
+			
+		}
+		return target;
+		}
+		catch(Exception e){
+			return "";
+		}
+		
+	}
+	
+	
 	@Override
 	public HashMap<String, String> filterDataForInternalUse(String rawData,
 			String regx) {
