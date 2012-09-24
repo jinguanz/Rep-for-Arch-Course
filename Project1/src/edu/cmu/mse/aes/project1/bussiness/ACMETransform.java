@@ -24,16 +24,16 @@ public class ACMETransform {
         String brand = "";
         String model = "";
         
-        System.out.println("Enter a brand: ");
-        Scanner scan = new Scanner(System.in);
-        brand = scan.next();
-        System.out.println("You entered the following brand: "+brand);
+        //System.out.println("Enter a brand: ");
+        //Scanner scan = new Scanner(System.in);
+        //brand = scan.next();
+        //System.out.println("You entered the following brand: "+brand);
         
         //System.out.println("Enter a model: ");
         //model = scan.next();
         model = args[2];
-        System.out.println("You entered the following model: "+model);
-        scan.close();
+        //System.out.println("You entered the following model: "+model);
+        //scan.close();
         
         File xmlFile = new File(args[0]);
         File xsltFile = new File(args[1]);
