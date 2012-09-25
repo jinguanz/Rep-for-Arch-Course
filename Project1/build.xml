@@ -18,7 +18,7 @@
         <javac srcdir="src" destdir="build/bin" classpathref="lib.classpath"/>
     </target>
     <target name="jar" depends="compile">
-        <jar destfile="Project1.jar" basedir="build/bin">
+        <jar destfile="build/Project1.jar" basedir="build/bin">
             <manifest>
                 <attribute name="Main-class" value="edu.cmu.mse.aes.project1.bussiness.ACMEBicyle"/>
             </manifest>
