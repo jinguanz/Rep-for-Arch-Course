@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
-<project default="run">
+<project default="jar">
+	
     <target name="clean">
         <delete dir="bin"/>
         <delete dir="build"/>
@@ -13,17 +14,22 @@
     <path id="lib.classpath">
         <fileset dir="lib" includes="*.jar" />
     </path>
+	
     <target name="compile" depends="clean">
         <mkdir dir="build/bin"/>
         <javac srcdir="src" destdir="build/bin" classpathref="lib.classpath"/>
     </target>
+	
     <target name="jar" depends="compile">
         <jar destfile="build/Project1.jar" basedir="build/bin">
+        	<zipgroupfileset dir="lib" includes="*.jar" /> 
             <manifest>
                 <attribute name="Main-class" value="edu.cmu.mse.aes.project1.bussiness.ACMEBicyle"/>
-            </manifest>
+            	<attribute name="Class-Path" value="bulid/lib/*"/>
+            </manifest>  
         </jar>    
     </target>
+	
     <target name="run" depends="jar">
         <java jar="Project1.jar" fork="true"/>
         
