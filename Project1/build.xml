@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<project default="run" basedir="Rep-for-Arch-Course/Project1">
+
+    <target name="clean">
+        <delete dir="bin"/>
+        <delete dir="build"/>
+        <mkdir dir="build/src"/>
+        <mkdir dir="build/lib"/>
+        <copydir src="src"
+           dest="build/src"/>
+        <copydir src="lib"
+           dest="build/lib"/>
+    </target>
+    <path id="lib.classpath">
+        <fileset dir="Rep-for-Arch-Course/Project1/lib" includes="*.jar" />
+    </path>
+    <target name="compile" depends="clean">
+        <mkdir dir="build/bin"/>
+        <javac srcdir="src" destdir="build/bin" classpathref="lib.classpath"/>
+    </target>
+    <target name="jar" depends="compile">
+        <jar destfile="Project1.jar" basedir="build/bin">
+            <manifest>
+                <attribute name="Main-class" value="edu.cmu.mse.aes.project1.bussiness.ACMEBicyle"/>
+            </manifest>
+        </jar>    
+    </target>
+    <target name="run" depends="jar">
+        <java jar="Project1.jar" fork="true"/>
+        
+    </target>
+</project>
