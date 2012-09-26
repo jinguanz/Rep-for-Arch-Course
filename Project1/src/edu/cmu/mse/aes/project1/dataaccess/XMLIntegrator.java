@@ -31,14 +31,13 @@ public class XMLIntegrator implements IXMLIntegrator
 						int i = fileEntry.getName().lastIndexOf(".");
 						String extension = fileEntry.getName().substring(i+1);
 						
-				    	if(fileEntry.isFile() && !fileEntry.getName().equalsIgnoreCase("IntegratedXML.xml") && extension.equals("xml"))
+				    	if(fileEntry.isFile() && !fileEntry.getName().equalsIgnoreCase("IntegratedXMLFile.xml") && extension.equals("xml"))
 				    	{
 				    		JAXBContext context = JAXBContext.newInstance(JAXB_CONTEXT_PACKAGE);
 					    	Bikelist b = (Bikelist) context.createUnmarshaller().unmarshal(fileEntry);
 					    
 					    	listOfBikeList.add(b);
 				    	}
-				    	
 				}
 			
 				//A final list of bikes gathered from different bikelists.
@@ -58,17 +57,6 @@ public class XMLIntegrator implements IXMLIntegrator
 				
 				JAXBContext context1 = JAXBContext.newInstance(JAXB_CONTEXT_PACKAGE);
 				f = new File("xmlfiles"+File.separator+"IntegratedXML.xml");
-				
-				Bikelist bikeListFromIntegratedXMLFile = null;
-				if(f.exists())
-					 bikeListFromIntegratedXMLFile = (Bikelist) context1.createUnmarshaller().unmarshal(f);
-				else
-					bikeListFromIntegratedXMLFile = new Bikelist();
-		    	
-		    	for(Bike bike:bikeListFromIntegratedXMLFile.getBike())
-		    	{
-		    		finalBikeList.add(bike);
-		    	}
 		    	
 		    	FileOutputStream fos = null;
 				try 
