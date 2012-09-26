@@ -77,7 +77,7 @@ public class ACMEBicyle {
 			try {
 				selectedModelNumber = Integer.parseInt(buf2.readLine());
 				selectedModel = brandModelMap.get(selectedbrand).get(
-						selectedModelNumber - 1);
+						selectedModelNumber);
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
