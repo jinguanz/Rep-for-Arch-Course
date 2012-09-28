@@ -167,7 +167,7 @@ public class HW4GUI {
 		padAndAppend(answer, data.getDescription(), 30);
 
 		padAndAppend(answer, data.getAmount() + "", 10);
-		padAndAppend(answer, data.getFee() + "", 10);
+		padAndAppend(answer,"-"+ data.getFee() , 10);
 		padAndAppend(answer, data.getCurrentBalance() + "", 10);
 
 		answer.append('\n');
@@ -219,6 +219,8 @@ public class HW4GUI {
 				Collections.sort(operationHistory);
 				Util.calcBlance(operationHistory);
 				representDataInTextArea(operationHistory);
+				textField_2.setText("");
+				textField_1.setText("");
 
 			} else {
 				textField_3.setText("something wrong with the amount");
