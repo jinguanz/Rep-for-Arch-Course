@@ -75,5 +75,18 @@ public class Util {
 		
 		return arr;
 	}
+	
+	public static boolean checkDateInput(String str){
+		
+		try {
+			formatter.parse(str);
+			return true;
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			return false;
+		}
+		
+		
+	}
 
 }

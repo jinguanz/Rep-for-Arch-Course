@@ -1,4 +1,5 @@
 package edu.cmu.mse.rui.J2EE.HW4;
+
 /*
  * 
  * 08-600 
@@ -6,7 +7,8 @@ package edu.cmu.mse.rui.J2EE.HW4;
  * Rui Li <ruili@andrew.cmu.edu> 
  * September 28, 2012 
  */
- 
+
+import java.awt.Color;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -28,7 +30,6 @@ public class HW4GUI {
 	private ArrayList<HW4Data> operationHistory = new ArrayList<HW4Data>();
 	// increment by 1 once.
 	private static int currentCheckNo = 101;
-	
 
 	private JFrame frame;
 	private JTextField textField;
@@ -136,16 +137,19 @@ public class HW4GUI {
 		textField_3.setBounds(76, 121, 443, 21);
 		panel.add(textField_3);
 		textField_3.setColumns(10);
+		//textField_3.setCaretColor(Color.RED);
+		textField_3.setForeground(Color.RED);
 
 		textArea = new JTextArea();
 		textArea.setEditable(false);
 		textArea.setFont(new Font("Lucida Grande", Font.PLAIN, 13));
 		textArea.setBounds(36, 174, 549, 213);
 		panel.add(textArea);
+		textArea.append(buildHeader());
 
 	}
 
-	//represent data in the text area.
+	// represent data in the text area.
 	private void representDataInTextArea(ArrayList<HW4Data> arr) {
 		textArea.setText("");
 		textArea.append(buildHeader());
@@ -155,7 +159,7 @@ public class HW4GUI {
 		}
 	}
 
-	//to format one operation 
+	// to format one operation
 	private String formatOneOperation(HW4Data data) {
 		StringBuffer answer = new StringBuffer();
 
@@ -167,7 +171,7 @@ public class HW4GUI {
 		padAndAppend(answer, data.getDescription(), 30);
 
 		padAndAppend(answer, data.getAmount() + "", 10);
-		padAndAppend(answer,"-"+ data.getFee() , 10);
+		padAndAppend(answer, "-" + data.getFee(), 10);
 		padAndAppend(answer, data.getCurrentBalance() + "", 10);
 
 		answer.append('\n');
@@ -175,16 +179,16 @@ public class HW4GUI {
 	}
 
 	private void padAndAppend(StringBuffer b, String s, int width) {
-		
+
 		b.append(s);
 		for (int i = s.length(); i < width; i++) {
 			b.append(' ');
 		}
 	}
-	
-	//to build the header of the operation history
-	private String buildHeader(){
-		StringBuffer header=new StringBuffer();
+
+	// to build the header of the operation history
+	private String buildHeader() {
+		StringBuffer header = new StringBuffer();
 		padAndAppend(header, "date", 20);
 		padAndAppend(header, "Check#", 15);
 		padAndAppend(header, "Description", 30);
@@ -192,7 +196,7 @@ public class HW4GUI {
 		padAndAppend(header, "Fee", 10);
 		padAndAppend(header, "Balance", 10);
 		return header.toString();
-		
+
 	}
 
 	// check the data
@@ -205,33 +209,37 @@ public class HW4GUI {
 		String inputDes = textField_1.getText().trim();
 		String inputAmount = textField_2.getText().trim();
 		boolean isCheck = flag;
-		if (Util.checkoutEmptyDescription(inputDes)) {
-			if (Util.checkAmount(inputAmount, isCheck)) {
-				HW4Data e1 = null;
-				e1 = new HW4Data(Util.dateConvert(inputDate), inputDes,
-						Double.parseDouble(inputAmount), currentCheckNo,
-						isCheck);
-				if (isCheck) {
-					currentCheckNo++;
+		if (Util.checkDateInput(inputDate)) {
+			if (Util.checkoutEmptyDescription(inputDes)) {
+				if (Util.checkAmount(inputAmount, isCheck)) {
+					HW4Data e1 = null;
+					e1 = new HW4Data(Util.dateConvert(inputDate), inputDes,
+							Double.parseDouble(inputAmount), currentCheckNo,
+							isCheck);
+					if (isCheck) {
+						currentCheckNo++;
+					}
+
+					operationHistory.add(e1);
+					Collections.sort(operationHistory);
+					Util.calcBlance(operationHistory);
+					representDataInTextArea(operationHistory);
+					textField_2.setText("");
+					textField_1.setText("");
+
+				} else {
+					textField_3.setText("amount is not valid number");
 				}
 
-				operationHistory.add(e1);
-				Collections.sort(operationHistory);
-				Util.calcBlance(operationHistory);
-				representDataInTextArea(operationHistory);
-				textField_2.setText("");
-				textField_1.setText("");
-
 			} else {
-				textField_3.setText("something wrong with the amount");
+				textField_3.setText("description is not valid");
+
 			}
 
 		} else {
-			textField_3
-					.setText("something wrong with the description, forogt it?");
+			textField_3.setText("date format is wrong,please use MM/dd/yyyy");
 
 		}
-
 	}
 
 }
