@@ -8,10 +8,12 @@ package edu.cmu.mse.rui.J2EE.HW4;
  * September 28, 2012 
  */
 
+import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
+import javax.swing.JScrollPane;
 import javax.swing.JTextField;
 import javax.swing.JPanel;
 import javax.swing.JButton;
@@ -24,6 +26,7 @@ import java.util.Collections;
 import javax.swing.JLabel;
 import javax.swing.JTextArea;
 import java.awt.Font;
+import javax.swing.ScrollPaneConstants;
 
 public class HW4GUI {
 
@@ -38,6 +41,7 @@ public class HW4GUI {
 	private JButton btnCheck;
 	private JTextField textField_3;
 	private JTextArea textArea;
+	private JScrollPane scrollPane;
 
 	/**
 	 * Launch the application.
@@ -139,13 +143,30 @@ public class HW4GUI {
 		textField_3.setColumns(10);
 		//textField_3.setCaretColor(Color.RED);
 		textField_3.setForeground(Color.RED);
-
+		
 		textArea = new JTextArea();
+		panel.add(textArea);
 		textArea.setEditable(false);
 		textArea.setFont(new Font("Lucida Grande", Font.PLAIN, 13));
-		textArea.setBounds(36, 174, 549, 213);
-		panel.add(textArea);
+		textArea.setBounds(0, 0, 0, 16);
+		//panel.add(textArea);
 		textArea.append(buildHeader());
+		textArea.setAutoscrolls(true);
+		
+//		JScrollPane spane=new JScrollPane();
+//		spane.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
+//		spane.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
+//		panel.add(spane,BorderLayout.SOUTH);
+		
+		scrollPane = new JScrollPane(textArea);
+		scrollPane.setBounds(36, 183, 568, 207);
+		scrollPane.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
+		scrollPane.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
+		panel.add(scrollPane);
+		
+				
+		
+		
 
 	}
 
@@ -212,6 +233,7 @@ public class HW4GUI {
 		if (Util.checkDateInput(inputDate)) {
 			if (Util.checkoutEmptyDescription(inputDes)) {
 				if (Util.checkAmount(inputAmount, isCheck)) {
+					textField_3.setText("");
 					HW4Data e1 = null;
 					e1 = new HW4Data(Util.dateConvert(inputDate), inputDes,
 							Double.parseDouble(inputAmount), currentCheckNo,
