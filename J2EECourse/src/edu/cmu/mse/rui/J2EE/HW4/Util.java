@@ -8,10 +8,10 @@ import java.util.Collections;
 import java.util.Date;
 
 public class Util {
-	private static SimpleDateFormat formatter = new SimpleDateFormat("MM/dd/yyyy");
+	private static SimpleDateFormat formatter = new SimpleDateFormat(
+			"MM/dd/yyyy");
 
-	
-	//To Check whether the Description is empty
+	// To Check whether the Description is empty
 	public static boolean checkoutEmptyDescription(String str) {
 		if (str.equals("")) {
 			return false;
@@ -20,7 +20,7 @@ public class Util {
 
 	}
 
-	//to check the input amount in a certain range
+	// to check the input amount in a certain range
 	public static boolean checkAmount(String amount, boolean isCheck) {
 		try {
 			double amountInDouble = Double.parseDouble(amount);
@@ -36,10 +36,9 @@ public class Util {
 
 	}
 
-	
-	//convert String to java.util.Date
+	// convert String to java.util.Date
 	public static Date dateConvert(String str) {
-		
+
 		Date date = Calendar.getInstance().getTime();
 		try {
 			date = formatter.parse(str);
@@ -50,43 +49,48 @@ public class Util {
 		return date;
 
 	}
-	
-	//convert java.util.Date to a certain format String
-	public static String DateToString(Date d){
-		
+
+	// convert java.util.Date to a certain format String
+	public static String DateToString(Date d) {
+
 		return formatter.format(d);
 	}
 
-	//sort arrayList
+	// sort arrayList
 	public static ArrayList<HW4Data> sort(ArrayList<HW4Data> arr) {
 		Collections.sort(arr);
 
 		return arr;
 
 	}
-	
-	//re calc balance of after sort.
-	public static ArrayList<HW4Data> calcBlance(ArrayList<HW4Data> arr){
-		double preBalance=0.0;
-		for(HW4Data data:arr){
-			data.setCurrentBalance(data.calBlance(preBalance, data.getAmount(), data.getFee(), data.isCheck()));
-			preBalance=data.getCurrentBalance();
+
+	// re calc balance of after sort.
+	public static ArrayList<HW4Data> calcBlance(ArrayList<HW4Data> arr) {
+		double preBalance = 0.0;
+		for (HW4Data data : arr) {
+			data.setCurrentBalance(data.calBlance(preBalance, data.getAmount(),
+					data.getFee(), data.isCheck()));
+			preBalance = data.getCurrentBalance();
 		}
-		
+
 		return arr;
 	}
-	
-	public static boolean checkDateInput(String str){
-		
-		try {
-			formatter.parse(str);
-			return true;
-		} catch (ParseException e) {
-			// TODO Auto-generated catch block
+
+	// should follow "MM/dd/yyyy"
+	public static boolean checkDateInput(String str) {
+		String[] date = str.split("/");
+		if (date[0].length() == 2 && date[1].length() == 2
+				&& date[2].length() == 4) {
+			try {
+				formatter.parse(str);
+				return true;
+			} catch (ParseException e) {
+				// TODO Auto-generated catch block
+				return false;
+			}
+		} else
 			return false;
-		}
-		
-		
+
 	}
 
 }
