@@ -19,6 +19,7 @@ import javax.swing.JPanel;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Collections;
@@ -42,6 +43,7 @@ public class HW4GUI {
 	private JTextField textField_3;
 	private JTextArea textArea;
 	private JScrollPane scrollPane;
+	private static DecimalFormat df = new DecimalFormat("#.##");
 
 	/**
 	 * Launch the application.
@@ -71,7 +73,7 @@ public class HW4GUI {
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
-		frame = new JFrame();
+		frame = new JFrame("15-600 Checking account Register");
 		frame.setBounds(100, 100, 643, 446);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
@@ -186,14 +188,14 @@ public class HW4GUI {
 
 		padAndAppend(answer, Util.DateToString(data.getCreateDate()), 20);
 		if (data.isCheck())
-			padAndAppend(answer, data.getChectNo() + "", 15);
+			padAndAppend(answer, data.getChectNo() + "", 11);
 		else
-			padAndAppend(answer, "", 15);
+			padAndAppend(answer, "   ", 15);
 		padAndAppend(answer, data.getDescription(), 30);
 
-		padAndAppend(answer, data.getAmount() + "", 10);
-		padAndAppend(answer, "-" + data.getFee(), 10);
-		padAndAppend(answer, data.getCurrentBalance() + "", 10);
+		appendAndPad(answer, df.format(data.getAmount()), 10);
+		appendAndPad(answer, "-" + df.format(data.getFee()), 10);
+		appendAndPad(answer, df.format(data.getCurrentBalance()) + "", 10);
 
 		answer.append('\n');
 		return answer.toString();
@@ -205,6 +207,14 @@ public class HW4GUI {
 		for (int i = s.length(); i < width; i++) {
 			b.append(' ');
 		}
+	}
+	
+	private void appendAndPad(StringBuffer b, String s, int width) {
+		for (int i = s.length(); i < width; i++) {
+			b.append(' ');
+		}
+		b.append(s);
+		
 	}
 
 	// to build the header of the operation history
@@ -234,6 +244,11 @@ public class HW4GUI {
 			if (Util.checkoutEmptyDescription(inputDes)) {
 				if (Util.checkAmount(inputAmount, isCheck)) {
 					textField_3.setText("");
+					if(inputDes.length()>8){
+						inputDes=(String) inputDes.subSequence(0, 8);
+						textField_3.setText("WARN:description is too long,auto truncate to"+inputDes);
+					}
+					//textField_3.setText("");
 					HW4Data e1 = null;
 					e1 = new HW4Data(Util.dateConvert(inputDate), inputDes,
 							Double.parseDouble(inputAmount), currentCheckNo,

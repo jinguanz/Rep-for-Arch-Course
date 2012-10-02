@@ -1,5 +1,12 @@
 package edu.cmu.mse.rui.J2EE.HW4;
 
+/*
+ * 08-600 
+ * Homework #4
+ * Rui Li <ruili@andrew.cmu.edu> 
+ * September 28, 2012 
+ */
+import java.text.DecimalFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -10,6 +17,7 @@ import java.util.Date;
 public class Util {
 	private static SimpleDateFormat formatter = new SimpleDateFormat(
 			"MM/dd/yyyy");
+	private static DecimalFormat df = new DecimalFormat("#.##");
 
 	// To Check whether the Description is empty
 	public static boolean checkoutEmptyDescription(String str) {
