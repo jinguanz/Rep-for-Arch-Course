@@ -23,7 +23,7 @@ import edu.cmu.mse.aes.project1.dataaccess.XMLProcessor;
 public class ACMEBicyle {
 
 	private final String url = "http://bikereviews.com/road-bikes/";
-	private final String configFileName = "data/config.txt";
+	private final static String configFileName = "data/config.txt";
 	private static HashMap<String, String> brandToURLMap = new HashMap<String, String>();
 	private static HashMap<String, ArrayList<String>> brandModelMap = new HashMap<String, ArrayList<String>>();
 
@@ -41,18 +41,37 @@ public class ACMEBicyle {
 	}
 
 	public static void main(String[] args) {
-	
+
 		ACMEBicyle acmeBicyle = new ACMEBicyle();
-		
-		//get system init
-		acmeBicyle.init();
-		//if choose do not init, need to fix the config for persistence all the supported brands and models 
-		//not 
-		
-		
+
+		System.out.println("Please choose to re-init the system or not:");
+		System.out
+				.println("re-init will takes 10 mins to fetch data from websites,please input \"1\" if you want to choose this");
+		System.out
+				.println("choose to use old data, please input any number except 1");
+		BufferedReader buf3 = new BufferedReader(new InputStreamReader(
+				System.in));
+		String choice="";
+		try {
+			choice = buf3.readLine();
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		// get system init
+		if (choice.equals("1")) {
+			acmeBicyle.init();
+		}
+		// if choose do not init, need to fix the config for persistence all the
+		// supported brands and models
+		// not
+		else {
+			bulidMap();
+		}
+
 		ACMETransform transForm = new ACMETransform(
 				acmeBicyle.getBrandModelMap());
-		
+
 		while (true) {
 			System.out.println("here is our supported brands:");
 			transForm.supportBrands();
@@ -82,7 +101,7 @@ public class ACMEBicyle {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			System.out.println("your selected models"+selectedModel);
+			System.out.println("your selected models" + selectedModel);
 			transForm.viewCertainModel(selectedModel);
 		}
 	}
@@ -175,14 +194,14 @@ public class ACMEBicyle {
 					// b.printinfo();
 					bikesforoneBrand.add(b);
 				}
-				System.out.println("#"+eachBrand+","+bikeModelsForCertainBrand);
+				System.out.println("#" + eachBrand + ","
+						+ bikeModelsForCertainBrand);
 				brandModelMap.put(eachBrand, bikeModelsForCertainBrand);
 
 			}
-			
-			//writeMapToFile(brandModelMap);
-			
-			
+
+			 writeMapToFile(brandModelMap);
+
 			// when all the models of such brand been retrieved, call xml
 			// processor to save one xml file
 
@@ -202,10 +221,11 @@ public class ACMEBicyle {
 	}
 
 	private void writeMapToFile(HashMap<String, ArrayList<String>> configMap) {
+
 		// the format like this: #brand1:model1,model2...model3#brand2:model1...
 		String s = new String();
 		for (String brand : configMap.keySet()) {
-			s = "#" + brand + ",";
+			s = s + "#" + brand + ",";
 			for (String model : configMap.get(brand)) {
 				s = s + model + ",";
 			}
@@ -229,14 +249,14 @@ public class ACMEBicyle {
 
 	}
 
-	private void bulidMap() {
+	private static void bulidMap() {
 		File f = new File(configFileName);
 		String context;
 		if (f.exists()) {
 			try {
 				BufferedReader input = new BufferedReader(new FileReader(f));
 				context = input.readLine();
-				setBrandModelMap( buildMapFromString(context));
+				setBrandModelMap(buildMapFromString(context));
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -248,16 +268,17 @@ public class ACMEBicyle {
 
 	}
 
-	private HashMap<String, ArrayList<String>> buildMapFromString(String str) {
+	private static HashMap<String, ArrayList<String>> buildMapFromString(
+			String str) {
 
 		HashMap<String, ArrayList<String>> tmpHashMap = new HashMap<String, ArrayList<String>>();
-		//each element in this array, it's brand and models.
+		// each element in this array, it's brand and models.
 		String[] infos = str.split("#");
-		for (int i = 0; i < infos.length; i++) {
+		for (int i = 1; i < infos.length; i++) {
 			ArrayList<String> modelsArr = new ArrayList<String>();
-			//each element in the arr, it's either brand or model
-			String[] pieces=infos[i].split(",");
-			for (int j = 1; j < infos.length; j++) {
+			// each element in the arr, it's either brand or model
+			String[] pieces = infos[i].split(",");
+			for (int j = 1; j < pieces.length; j++) {
 				modelsArr.add(pieces[j]);
 			}
 			tmpHashMap.put(pieces[0], modelsArr);
