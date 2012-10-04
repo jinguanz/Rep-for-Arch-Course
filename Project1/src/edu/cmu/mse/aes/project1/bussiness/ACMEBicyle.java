@@ -51,7 +51,7 @@ public class ACMEBicyle {
 				.println("choose to use old data, please input any number except 1");
 		BufferedReader buf3 = new BufferedReader(new InputStreamReader(
 				System.in));
-		String choice="";
+		String choice = "";
 		try {
 			choice = buf3.readLine();
 		} catch (IOException e1) {
@@ -88,13 +88,27 @@ public class ACMEBicyle {
 
 			System.out.println("here is the the models with the brand:"
 					+ selectedbrand);
-			transForm.supportedModels(selectedbrand);
+			while (true) {
+				if (brandModelMap.keySet().contains(selectedbrand)) {
+					transForm.supportedModels(selectedbrand);
+					break;
+				} else {
+					System.out.println("wrong brand, please input it again");
+					try {
+						selectedbrand = buf.readLine();
+					} catch (IOException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+
+				}
+			}
 			BufferedReader buf2 = new BufferedReader(new InputStreamReader(
 					System.in));
 			int selectedModelNumber = 0;
 			String selectedModel = "";
 			try {
-				selectedModelNumber = Integer.parseInt(buf2.readLine());
+				selectedModelNumber = Integer.parseInt(buf2.readLine()) - 1;
 				selectedModel = brandModelMap.get(selectedbrand).get(
 						selectedModelNumber);
 			} catch (IOException e) {
@@ -200,7 +214,7 @@ public class ACMEBicyle {
 
 			}
 
-			 writeMapToFile(brandModelMap);
+			writeMapToFile(brandModelMap);
 
 			// when all the models of such brand been retrieved, call xml
 			// processor to save one xml file
