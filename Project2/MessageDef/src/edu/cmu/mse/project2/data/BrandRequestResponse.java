@@ -12,7 +12,7 @@ import org.jboss.soa.esb.message.Header;
 import org.jboss.soa.esb.message.Message;
 import org.jboss.soa.esb.message.Properties;
 
-public class BrandRequestReponse implements Message{
+public class BrandRequestResponse implements Message{
 	
 	private String requestid;
 	private String responseid;
@@ -57,6 +57,12 @@ public class BrandRequestReponse implements Message{
 	public URI getType() {
 		// TODO Auto-generated method stub
 		return null;
+	}
+	public ArrayList<String> getBrandsArr() {
+		return brandsArr;
+	}
+	public void setBrandsArr(ArrayList<String> brandsArr) {
+		this.brandsArr = brandsArr;
 	}
 
 }

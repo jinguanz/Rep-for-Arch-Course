@@ -12,11 +12,11 @@ import org.jboss.soa.esb.message.Header;
 import org.jboss.soa.esb.message.Message;
 import org.jboss.soa.esb.message.Properties;
 
-public class ModelInfoRequestReponse implements Message{
+public class ModelRequestResponse implements Message{
 	
 	private String requestid;
 	private String responseid;
-	private ArrayList<String> brandsArr;
+	private ArrayList<String> models;
 	@Override
 	public Message copy() throws IOException {
 		// TODO Auto-generated method stub
