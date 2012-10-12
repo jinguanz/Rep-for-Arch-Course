@@ -1,7 +1,9 @@
 package edu.cmu.mse.aes.project1.dataaccess;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -9,12 +11,14 @@ import java.util.List;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
+import javax.xml.bind.Unmarshaller;
 
 import edu.cmu.mse.aes.project1.data.Bike;
 import edu.cmu.mse.aes.project1.data.Bikelist;
 
 public class XMLProcessor implements IXMLProcessor
 {
+	public static final String BIKE_XML="data/integratedXMLFile.xml";
 	public boolean saveIntoXML(ArrayList<Bike> bikes)
 	{
 		JAXBContext jaxbContext = null;
@@ -53,5 +57,36 @@ public class XMLProcessor implements IXMLProcessor
 			}
 		}
 		return true;
+	}
+	/**
+	 * Convert xml to object
+	 * @return
+	 */
+	
+	public List<Bike> xmltoObject(){
+		JAXBContext context;
+		Bikelist bikeList = null;
+		Unmarshaller um;
+		try {
+			 context = JAXBContext.newInstance(Bikelist.class);
+			 um = context.createUnmarshaller();
+			 bikeList = (Bikelist) um.unmarshal(new FileReader(BIKE_XML));
+		} catch (JAXBException | FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return bikeList.getBike();
+		
+	}
+	public static void main(String args[]){
+		//Test the array
+		XMLProcessor processor = new XMLProcessor();
+		List<Bike> bikeList =processor.xmltoObject();
+		System.out.println("size: " + bikeList.size());
+		for(int i=0;i<bikeList.size();i++){
+			System.out.println(bikeList.get(i).getBrand() + " " + bikeList.get(i).getForkmaterial() + " " +bikeList.get(i).getFramematerial() +" "
+					+bikeList.get(i).getFramesize() +" " + bikeList.get(i).getModel() + " " +bikeList.get(i).getPrice() + " " +bikeList.get(i).getRating());
+		}
+		
 	}
 }
