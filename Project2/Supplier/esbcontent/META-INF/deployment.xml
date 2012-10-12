@@ -1,0 +1,4 @@
+<jbossesb-deployment>  
+  <jmsQueue>quickstart_helloworld_Request_esb</jmsQueue>
+  <jmsQueue>quickstart_helloworld_Request_gw</jmsQueue>
+</jbossesb-deployment>
