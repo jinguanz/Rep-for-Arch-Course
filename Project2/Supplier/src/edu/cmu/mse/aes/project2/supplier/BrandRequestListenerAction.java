@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import org.jboss.soa.esb.actions.AbstractActionLifecycle;
 import org.jboss.soa.esb.helpers.ConfigTree;
-import org.jboss.soa.esb.message.Message;
+import javax.jms.Message;
 
 import edu.cmu.mse.project2.data.BrandRequest;
 import edu.cmu.mse.project2.data.BrandRequestResponse;

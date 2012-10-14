@@ -13,7 +13,7 @@ import edu.cmu.mse.aes.project1.data.Bike;
 public interface IDataQuery {
 	
 	public ArrayList<String> getBrands();
-	public ArrayList<String> getModels();
+	public ArrayList<String> getModels(String brand);
 	public Bike getModelInfo(String model);
 
 }
