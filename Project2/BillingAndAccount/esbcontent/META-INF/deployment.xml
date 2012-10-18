@@ -1,0 +1,14 @@
+<jbossesb-deployment>  
+  <jmsQueue>project2_supplier_brand_Request_esb</jmsQueue>
+  <jmsQueue>project2_supplier_brand_Request_gw</jmsQueue>
+  <jmsQueue>project2_supplier_model_Request_esb</jmsQueue>
+  <jmsQueue>project2_supplier_model_Request_gw</jmsQueue>
+  <jmsQueue>project2_supplier_modelInfo_Request_esb</jmsQueue>
+  <jmsQueue>project2_supplier_modelInfo_Request_gw</jmsQueue>
+  <jmsQueue>project2_supplier_brand_Response_esb</jmsQueue>
+  <jmsQueue>project2_supplier_brand_Response_gw</jmsQueue>
+  <jmsQueue>project2_supplier_model_Response_esb</jmsQueue>
+  <jmsQueue>project2_supplier_model_Response_gw</jmsQueue>
+  <jmsQueue>project2_supplier_modelInfo_Response_esb</jmsQueue>
+  <jmsQueue>project2_supplier_modelInfo_Response_gw</jmsQueue>
+</jbossesb-deployment>
