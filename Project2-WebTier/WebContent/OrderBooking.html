@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title> Order Booking </title>
+
+        <SCRIPT language="JavaScript" src="Document.js"></SCRIPT>
+
+    </head>
+
+    <body>
+        <a href = "Home.jsp">Home</a>&nbsp;
+        <a href="Logout.jsp">LogOut</a>
+    <center><h1>ACME Bicycle</h1></center>
+    <form name="form1" action="PlaceOrder.jsp" method="GET">
+
+        <table align="center">
+            <tr>
+                <th colspan="2" align="center">Customer Details</th>
+            </tr>
+
+            <tr>
+                <td>Customer ID</td>
+                <td><input type="text" name="ID" maxlength="4" size="10"></td>
+            </tr>
+
+            <tr>
+                <td>Recipient Name</td>
+                <td><input type="text" name="Recnam" maxlength="25" size="10"></td>
+            </tr>
+
+            <tr>
+                <td>Recipient Address</td>
+                <td><input type="text" name="txtaddr" maxlength="50"></td>
+            </tr>
+
+            <tr>
+                <td>City</td>
+                <td>
+                    <select name="selCity">
+                        <option value="D">Pittsburgh</option>
+                        <option value="D">New York</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                
+                <td><input type="Submit" name="sub" value="Submit" onclick = "return fnValidate_order()">
+                    <input type="Reset" name="reset" value="Reset"></td>
+            </tr>
+        </table>
+    </form>
+    <br><br><br><br><br>
+
+</body>
+</html>
