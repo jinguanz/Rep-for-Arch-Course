@@ -30,16 +30,16 @@ import edu.cmu.mse.aes.project1.data.Bikelist;
 
 public class DataQueryService implements IDataQuery {
 
-	private final static String configFileName = "data/config.txt";
-	//for such map the keyi is the brand and the value is a array of the brands
+	private final static String configFileName = "config.txt";
+	// for such map the keyi is the brand and the value is a array of the brands
 	private static HashMap<String, ArrayList<String>> brandModelMap = new HashMap<String, ArrayList<String>>();
-	private final String sourceFileName = "data/integratedXMLFile.xml";
+	private final String sourceFileName = "integratedXMLFile.xml";
 
-	// for such map the keyi is the model, and the value is the Bike
+	// for such map the key is the model, and the value is the Bike
 	private final HashMap<String, Bike> modelToInfoMap = new HashMap<String, Bike>();
 
 	DataQueryService() {
-		super();
+		// super();
 		getBrandsandModelsFromXML();
 		initModelInfoFromXML();
 
@@ -67,7 +67,10 @@ public class DataQueryService implements IDataQuery {
 	@Override
 	public Bike getModelInfo(String model) {
 		// TODO Auto-generated method stub
-		return null;
+		//return null;
+		if(modelToInfoMap.containsKey(model)) return modelToInfoMap.get(model);
+		else return null;
+		
 	}
 
 	private void getBrandsandModelsFromXML() {
@@ -140,6 +143,23 @@ public class DataQueryService implements IDataQuery {
 			return modelToInfoMap.get(model);
 		else
 			return null;
+
+	}
+
+	public static void main(String args[]) {
+		DataQueryService dqs = new DataQueryService();
+		ArrayList<String> brands = dqs.getBrands();
+		for (String eachBrand : brands) {
+			System.out.print(eachBrand + "");
+		}
+		System.out.println();
+		ArrayList<String> models=dqs.getModels(brands.get(4));
+		for (String eachmodel : models) {
+			System.out.println(eachmodel + "");
+		}
+		
+		Bike b=dqs.getModelInfo(models.get(1));
+		System.out.println(b.getBrand()+","+b.getForkmaterial()+""+b.getModel());
 
 	}
 }

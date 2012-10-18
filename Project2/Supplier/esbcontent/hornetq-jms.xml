@@ -1,16 +1,55 @@
 <configuration xmlns="urn:hornetq"
                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                xsi:schemaLocation="urn:hornetq /schema/hornetq-jms.xsd">
-        
-
-        
-        <queue name="quickstart_helloworld_Request_esb">
-                <entry name="quickstart_helloworld_Request_esb"/>
+              
+        <queue name="project2_supplier_brand_Request_esb">
+                <entry name="project2_supplier_brand_Request_esb"/>
         </queue>
         
-         <queue name="quickstart_helloworld_Request_gw">
-                <entry name="quickstart_helloworld_Request_gw"/>
+         <queue name="project2_supplier_brand_Request_gw">
+                <entry name="project2_supplier_brand_Request_gw"/>
         </queue>
+        
+        <queue name="project2_supplier_model_Request_esb">
+                <entry name="project2_supplier_model_Request_esb"/>
+        </queue>
+        
+         <queue name="project2_supplier_model_Request_gw">
+                <entry name="project2_supplier_model_Request_gw"/>
+        </queue>
+        <queue name="project2_supplier_modelInfo_Request_esb">
+                <entry name="project2_supplier_modelInfo_Request_esb"/>
+        </queue>
+        
+         <queue name="project2_supplier_modelInfo_Request_gw">
+                <entry name="project2_supplier_modelInfo_Request_gw"/>
+        </queue>
+        <queue name="project2_supplier_brand_Response_esb">
+                <entry name="project2_supplier_brand_Response_esb"/>
+        </queue>
+        
+         <queue name="project2_supplier_brand_Response_gw">
+                <entry name="project2_supplier_brand_Response_gw"/>
+        </queue>
+        <queue name="project2_supplier_model_Response_esb">
+                <entry name="project2_supplier_model_Response_esb"/>
+        </queue>
+        
+         <queue name="project2_supplier_model_Response_gw">
+                <entry name="project2_supplier_model_Response_gw"/>
+        </queue>
+        
+                <queue name="project2_supplier_modelInfo_Response_esb">
+                <entry name="project2_supplier_modelInfo_Response_esb"/>
+        </queue>
+        
+         <queue name="project2_supplier_modelInfo_Response_gw">
+                <entry name="project2_supplier_modelInfo_Response_gw"/>
+        </queue>
+        
+        
+        
+        
         
         
 </configuration>

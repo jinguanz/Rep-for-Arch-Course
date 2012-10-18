@@ -18,7 +18,7 @@ import edu.cmu.mse.project2.data.BrandRequestResponse;
  */
 public class BrandRequestListenerAction extends AbstractActionLifecycle {
 	private DataQueryService dqs = new DataQueryService();
-	private ArrayList<String> brands = new ArrayList();
+//	private ArrayList<String> brands = new ArrayList();
 
 	protected ConfigTree _config;
 
@@ -28,16 +28,13 @@ public class BrandRequestListenerAction extends AbstractActionLifecycle {
 
 	public Message returnAllBrands(Message message) throws Exception {
 
-		// System.out.println("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&");
-		// System.out.println("Body: " + message.getBody().get()) ;
-		// System.out.println("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&");
-		// return message;
 		BrandRequestResponse brr = new BrandRequestResponse();
 		if (message instanceof BrandRequest) {
-			if (brands.size() == 0) {
-				brands = dqs.getBrands();
-			}
-			brr.setBrandsArr(brands);
+//			if (brands.size() == 0) {
+//				brands = dqs.getBrands();
+//				System.out.println("brand no:" + brands.size());
+//			}
+//			brr.setBrandsArr(brands);
 
 		}
 		// TODO: not return , should send a message to ESB queue

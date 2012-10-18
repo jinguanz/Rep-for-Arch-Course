@@ -52,7 +52,8 @@ public class SendJMSMessage {
     	Object tmp = iniCtx.lookup("ConnectionFactory");
     	QueueConnectionFactory qcf = (QueueConnectionFactory) tmp;
     	conn = qcf.createQueueConnection();
-    	que = (Queue) iniCtx.lookup("quickstart_helloworld_Request_gw");
+    	//que = (Queue) iniCtx.lookup("quickstart_helloworld_Request_gw");
+    	que=(Queue) iniCtx.lookup("quickstart_webservice_producer_gw");
     	session = conn.createQueueSession(false, QueueSession.AUTO_ACKNOWLEDGE);
     	conn.start();
     	System.out.println("Connection Started");
