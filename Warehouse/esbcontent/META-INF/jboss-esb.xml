@@ -1,0 +1,70 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<jbossesb xmlns="http://anonsvn.labs.jboss.com/labs/jbossesb/trunk/product/etc/schemas/xml/jbossesb-1.0.1.xsd"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://anonsvn.labs.jboss.com/labs/jbossesb/trunk/product/etc/schemas/xml/jbossesb-1.0.1.xsd http://anonsvn.jboss.org/repos/labs/labs/jbossesb/trunk/product/etc/schemas/xml/jbossesb-1.0.1.xsd"
+ parameterReloadSecs="5">
+ 
+ 	<providers>
+          <jms-provider name="JBossMQ" connection-factory="ConnectionFactory">
+              <jms-bus busid="warehouseGwChannel">
+                  <jms-message-filter
+                      dest-type="QUEUE"
+                      dest-name="warehouse_Request_gw"
+                   />
+              </jms-bus>
+              <jms-bus busid="warehouseEsbChannel">
+                  <jms-message-filter
+                      dest-type="QUEUE"
+                      dest-name="warehouse_Request_esb"
+                  />
+              </jms-bus>
+
+          </jms-provider>
+      </providers>
+      
+      
+      <services>
+        <service 
+        	category="warehouseServiceESB" 
+        	name="checkInStock" 
+        	description="Checks of a bike is available in stock">
+            <listeners>
+                <jms-listener name="JMS-Gateway"
+                    busidref="warehouseGwChannel"
+                    is-gateway="true"
+                />
+                <jms-listener name="warehouse"
+                              busidref="warehouseEsbChannel"
+                />
+            </listeners>
+            <actions mep="RequestResponse">
+                   <action name="checkInStockAction" 
+                   	class="edu.cmu.aes.project2.CheckStock" 
+                   	process="checkBikeInStock" 
+                   	/>      
+            </actions>
+        </service>
+        
+        <service 
+        	category="warehouseServiceESB" 
+        	name="orderBikeForWarehouse" 
+        	description="Orders bikes if low in warehouse.">
+            <listeners>
+                <jms-listener name="JMS-Gateway"
+                    busidref="warehouseGwChannel"
+                    is-gateway="true"
+                />
+                <jms-listener name="warehouse"
+                              busidref="warehouseEsbChannel"
+                />
+            </listeners>
+            <actions mep="RequestResponse">
+                   <action name="checkInStockAction" 
+                   	class="edu.cmu.aes.project2.OrderBike" 
+                   	process="orderBikesForWarehouse" 
+                   	/>      
+            </actions>
+        </service>
+      </services>
+      
+ 
+ </jbossesb>
