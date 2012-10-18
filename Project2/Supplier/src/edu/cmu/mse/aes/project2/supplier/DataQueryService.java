@@ -15,6 +15,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBException;
+import javax.xml.bind.Unmarshaller;
 import javax.xml.transform.Source;
 import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerFactory;
@@ -22,27 +25,43 @@ import javax.xml.transform.stream.StreamSource;
 import javax.xml.transform.stream.StreamResult;
 import java.io.*;
 
-
 import edu.cmu.mse.aes.project1.data.Bike;
+import edu.cmu.mse.aes.project1.data.Bikelist;
 
 public class DataQueryService implements IDataQuery {
 
 	private final static String configFileName = "data/config.txt";
-	private static final java.lang.String HtmlFile = null;
+	//for such map the keyi is the brand and the value is a array of the brands
 	private static HashMap<String, ArrayList<String>> brandModelMap = new HashMap<String, ArrayList<String>>();
 	private final String sourceFileName = "data/integratedXMLFile.xml";
-	private final  HashMap<String,Bike> modelToInfoMap=new HashMap<String,Bike>();
 
-	@Override
-	public ArrayList<String> getBrands() {
+	// for such map the keyi is the model, and the value is the Bike
+	private final HashMap<String, Bike> modelToInfoMap = new HashMap<String, Bike>();
 
-		return null;
+	DataQueryService() {
+		super();
+		getBrandsandModelsFromXML();
+		initModelInfoFromXML();
+
 	}
 
 	@Override
-	public ArrayList<String> getModels() {
+	public ArrayList<String> getBrands() {
+		ArrayList<String> brands = new ArrayList<String>();
+		for (String eachBrand : brandModelMap.keySet()) {
+			brands.add(eachBrand);
+		}
+
+		return brands;
+	}
+
+	@Override
+	public ArrayList<String> getModels(String brand) {
 		// TODO Auto-generated method stub
-		return null;
+		if (brandModelMap.containsKey(brand))
+			return brandModelMap.get(brand);
+		else
+			return null;
 	}
 
 	@Override
@@ -51,7 +70,7 @@ public class DataQueryService implements IDataQuery {
 		return null;
 	}
 
-	private void bulidMap() {
+	private void getBrandsandModelsFromXML() {
 		File f = new File(configFileName);
 		String context;
 		if (f.exists()) {
@@ -97,35 +116,30 @@ public class DataQueryService implements IDataQuery {
 
 	}
 
-//need implementation 
-	private void viewCertainModel(String model) {
-//
-//		File f = new File(HtmlFile);
-//		File sourceFile = new File(sourceFileName);
-//		String xslFileName = null;
-//		File xslFile = new File(xslFileName);
-//		// BufferedWriter bw = new BufferedWriter(new FileWriter(f));
-//
-//		Source xmlSource = new StreamSource(sourceFile);
-//		Source xsltSource = new StreamSource(xslFile);
-//
-//		TransformerFactory transFact = TransformerFactory.newInstance();
-//		Transformer trans;
-//		try {
-//			trans = transFact.newTransformer(xsltSource);
-//
-//			trans.setParameter("modelname", model.toString());
-//
-//			trans.transform(xmlSource,
-//					new StreamResult(new FileOutputStream(f)));
-//			// trans.transform(xmlSource, new StreamResult(bw));
-//			// String url = "http://www.google.com";
-//			java.awt.Desktop.getDesktop().browse(java.net.URI.create(HtmlFile));
-//		} catch (Exception e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-//		System.out.println("Processing done!!");
-//
+	private void initModelInfoFromXML() {
+		JAXBContext context;
+		Bikelist bikeList = null;
+		Unmarshaller um;
+		try {
+			context = JAXBContext.newInstance(Bikelist.class);
+			um = context.createUnmarshaller();
+			bikeList = (Bikelist) um.unmarshal(new FileReader(sourceFileName));
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		for (Bike eachBike : bikeList.getBike()) {
+			modelToInfoMap.put(eachBike.getModel(), eachBike);
+		}
+
+	}
+
+	// read all the bikes from the xml file first and then search in the Map
+	private Bike viewCertainModel(String model) {
+		if (modelToInfoMap.containsKey(model))
+			return modelToInfoMap.get(model);
+		else
+			return null;
+
 	}
 }
