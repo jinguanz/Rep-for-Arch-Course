@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+<title>HW6</title>
+<script type="text/javascript">
+	function calc(where) {
+		var inputBoxEl = document.getElementById("x");
+		var x = inputBoxEl.value;
+		var inputBoxE2 = document.getElementById("y");
+		var y = inputBoxE2.value;
+		// alert(x+y);
+		checkNumeric(x);
+		checkNumeric(y);
+		if (where == "+") {
+			document.getElementById('result').value = x * 1 + y * 1;
+		}
+		if (where == "-") {
+			document.getElementById('result').value = x - y;
+		}
+		if (where == "*") {
+			document.getElementById('result').value = x * y;
+		}
+		if (where == "/") {
+			//alert(y);
+			if (y * 1 == 0) {
+				alert("can not divide by 0");
+				document.getElementById('result').value = '';
+
+			} else
+				document.getElementById('result').value = x / y;
+		}
+	}
+	function checkNumeric(input) {
+		if ((input - 0) == input && input.length > 0) {
+			//return true;
+			//alert("correct number");
+		} else {
+			alert("please input a number");
+		}
+
+	}
+</script>
+</head>
+
+<body id="body">
+
+	<h2>Calculator in Html</h2>
+
+	<p>
+		x: <input type="text" id="x" name="x" />
+	</p>
+	<p>
+		y: <input type="text" id="y" name="y" />
+	</p>
+	<input id="add" type="button" value="+" onClick="calc('+');">
+	<input id="sub" type="button" value="-" onClick="calc('-');">
+	<input id="mutiply" type="button" value="*" onClick="calc('*');">
+	<input id="divide" type="button" value="/" onClick="calc('/');">
+	<br />
+
+	<p>
+		Answer: <input type="number" id="result" readonly="readonly" />
+	</p>
+
+
+
+</body>
+</html>
