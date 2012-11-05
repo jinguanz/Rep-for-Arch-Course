@@ -1,0 +1,25 @@
+
+<html>
+<head>
+<title>Servlet Calculator</title>
+<script type="text/javascript">function form_submit(type){alert("add be executed");
+document.aForm.opt.value=type;document.aForm.submit();}</script>
+</head>
+<body>
+	<form name="aForm" action=calculator method="GET">
+		x: <input type="text" size="40" name="x"> </br> y: <input
+			type="text" size="40" name="y"> </br> <input type="hidden"
+			size="40" name="opt" /> <input id="add" type="button" add="add"
+			value="+" onclick="form_submit("add");"> <input id="sub"
+			type="button" sub="sub" value="-" onclick="form_submit("sub");">
+		<input id="mutiply" type="button" muti="muti" value="*"
+			onclick="form_submit(" muti");"/> <input id="divide" type="button"
+			div="div" value="/" onclick="form_submit("div");">
+		</p>
+	</form>
+	Answer:
+	<input type="number" id="result" readonly="readonly" />
+	</p>
+	</font>
+</body>
+<html>
