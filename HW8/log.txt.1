@@ -1,0 +1,655 @@
+2012-11-26 16:13:27,898 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.persister.entity.BasicEntityPersister - Static SQL for entity: edu.cmu.mse.rui.J2ee.HW8.DataBean.Favorite
+2012-11-26 16:13:27,898 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.persister.entity.BasicEntityPersister -  Version select: select FavoriteID from webapp.ruili_favorite where FavoriteID =?
+2012-11-26 16:13:27,899 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.persister.entity.BasicEntityPersister -  Snapshot select: select favorite_.FavoriteID, favorite_.UserID as UserID0_, favorite_.URL as URL0_, favorite_.ClickCounter as ClickCou4_0_, favorite_.Comment as Comment0_ from webapp.ruili_favorite favorite_ where favorite_.FavoriteID=?
+2012-11-26 16:13:27,899 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.persister.entity.BasicEntityPersister -  Insert 0: insert into webapp.ruili_favorite (UserID, URL, ClickCounter, Comment, FavoriteID) values (?, ?, ?, ?, ?)
+2012-11-26 16:13:27,899 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.persister.entity.BasicEntityPersister -  Update 0: update webapp.ruili_favorite set UserID=?, URL=?, ClickCounter=?, Comment=? where FavoriteID=?
+2012-11-26 16:13:27,899 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.persister.entity.BasicEntityPersister -  Delete 0: delete from webapp.ruili_favorite where FavoriteID=?
+2012-11-26 16:13:27,920 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.persister.entity.BasicEntityPersister - Static SQL for entity: edu.cmu.mse.rui.J2ee.HW8.DataBean.User
+2012-11-26 16:13:27,920 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.persister.entity.BasicEntityPersister -  Version select: select UserID from webapp.ruili_user where UserID =?
+2012-11-26 16:13:27,920 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.persister.entity.BasicEntityPersister -  Snapshot select: select user_.UserID, user_.EmailAdd as EmailAdd1_, user_.FirstName as FirstName1_, user_.LastName as LastName1_, user_.Password as Password1_ from webapp.ruili_user user_ where user_.UserID=?
+2012-11-26 16:13:27,920 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.persister.entity.BasicEntityPersister -  Insert 0: insert into webapp.ruili_user (EmailAdd, FirstName, LastName, Password, UserID) values (?, ?, ?, ?, ?)
+2012-11-26 16:13:27,921 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.persister.entity.BasicEntityPersister -  Update 0: update webapp.ruili_user set EmailAdd=?, FirstName=?, LastName=?, Password=? where UserID=?
+2012-11-26 16:13:27,921 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.persister.entity.BasicEntityPersister -  Delete 0: delete from webapp.ruili_user where UserID=?
+2012-11-26 16:13:27,931 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.loader.entity.EntityLoader - Static select for entity edu.cmu.mse.rui.J2ee.HW8.DataBean.Favorite: select favorite0_.FavoriteID as FavoriteID0_, favorite0_.UserID as UserID0_0_, favorite0_.URL as URL0_0_, favorite0_.ClickCounter as ClickCou4_0_0_, favorite0_.Comment as Comment0_0_ from webapp.ruili_favorite favorite0_ where favorite0_.FavoriteID=?
+2012-11-26 16:13:27,931 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.loader.entity.EntityLoader - Static select for entity edu.cmu.mse.rui.J2ee.HW8.DataBean.Favorite: select favorite0_.FavoriteID as FavoriteID0_, favorite0_.UserID as UserID0_0_, favorite0_.URL as URL0_0_, favorite0_.ClickCounter as ClickCou4_0_0_, favorite0_.Comment as Comment0_0_ from webapp.ruili_favorite favorite0_ where favorite0_.FavoriteID=?
+2012-11-26 16:13:27,931 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.loader.entity.EntityLoader - Static select for entity edu.cmu.mse.rui.J2ee.HW8.DataBean.Favorite: select favorite0_.FavoriteID as FavoriteID0_, favorite0_.UserID as UserID0_0_, favorite0_.URL as URL0_0_, favorite0_.ClickCounter as ClickCou4_0_0_, favorite0_.Comment as Comment0_0_ from webapp.ruili_favorite favorite0_ where favorite0_.FavoriteID=? for update
+2012-11-26 16:13:27,932 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.loader.entity.EntityLoader - Static select for entity edu.cmu.mse.rui.J2ee.HW8.DataBean.Favorite: select favorite0_.FavoriteID as FavoriteID0_, favorite0_.UserID as UserID0_0_, favorite0_.URL as URL0_0_, favorite0_.ClickCounter as ClickCou4_0_0_, favorite0_.Comment as Comment0_0_ from webapp.ruili_favorite favorite0_ where favorite0_.FavoriteID=? for update
+2012-11-26 16:13:27,932 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.loader.entity.EntityLoader - Static select for entity edu.cmu.mse.rui.J2ee.HW8.DataBean.User: select user0_.UserID as UserID0_, user0_.EmailAdd as EmailAdd1_0_, user0_.FirstName as FirstName1_0_, user0_.LastName as LastName1_0_, user0_.Password as Password1_0_ from webapp.ruili_user user0_ where user0_.UserID=?
+2012-11-26 16:13:27,932 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.loader.entity.EntityLoader - Static select for entity edu.cmu.mse.rui.J2ee.HW8.DataBean.User: select user0_.UserID as UserID0_, user0_.EmailAdd as EmailAdd1_0_, user0_.FirstName as FirstName1_0_, user0_.LastName as LastName1_0_, user0_.Password as Password1_0_ from webapp.ruili_user user0_ where user0_.UserID=?
+2012-11-26 16:13:27,933 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.loader.entity.EntityLoader - Static select for entity edu.cmu.mse.rui.J2ee.HW8.DataBean.User: select user0_.UserID as UserID0_, user0_.EmailAdd as EmailAdd1_0_, user0_.FirstName as FirstName1_0_, user0_.LastName as LastName1_0_, user0_.Password as Password1_0_ from webapp.ruili_user user0_ where user0_.UserID=? for update
+2012-11-26 16:13:27,933 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.loader.entity.EntityLoader - Static select for entity edu.cmu.mse.rui.J2ee.HW8.DataBean.User: select user0_.UserID as UserID0_, user0_.EmailAdd as EmailAdd1_0_, user0_.FirstName as FirstName1_0_, user0_.LastName as LastName1_0_, user0_.Password as Password1_0_ from webapp.ruili_user user0_ where user0_.UserID=? for update
+2012-11-26 16:13:27,935 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.impl.SessionFactoryObjectFactory - initializing class SessionFactoryObjectFactory
+2012-11-26 16:13:27,936 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.impl.SessionFactoryObjectFactory - registered: 006d69883b3e914b013b3e914c7d0000 (unnamed)
+2012-11-26 16:13:27,936 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.impl.SessionFactoryObjectFactory - Not binding factory to JNDI, no JNDI name configured
+2012-11-26 16:13:27,936 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.impl.SessionFactoryImpl - instantiated session factory
+2012-11-26 16:13:27,938 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.dialect.Dialect - Using dialect: org.hibernate.dialect.MySQLDialect
+2012-11-26 16:13:27,939 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.cfg.Configuration - processing extends queue
+2012-11-26 16:13:27,939 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.cfg.Configuration - processing collection mappings
+2012-11-26 16:13:27,940 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.cfg.Configuration - processing association property references
+2012-11-26 16:13:27,940 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.cfg.Configuration - processing foreign key constraints
+2012-11-26 16:13:27,940 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.cfg.Configuration - processing extends queue
+2012-11-26 16:13:27,940 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.cfg.Configuration - processing collection mappings
+2012-11-26 16:13:27,940 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.cfg.Configuration - processing association property references
+2012-11-26 16:13:27,941 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.cfg.Configuration - processing foreign key constraints
+2012-11-26 16:13:27,941 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.tool.hbm2ddl.SchemaExport - Running hbm2ddl schema export
+2012-11-26 16:13:27,941 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.tool.hbm2ddl.SchemaExport - exporting generated schema to database
+2012-11-26 16:13:27,942 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.connection.DriverManagerConnectionProvider - Using Hibernate built-in connection pool (not for production use!)
+2012-11-26 16:13:27,942 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.connection.DriverManagerConnectionProvider - Hibernate connection pool size: 20
+2012-11-26 16:13:27,942 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.connection.DriverManagerConnectionProvider - autocommit mode: true
+2012-11-26 16:13:27,942 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.connection.DriverManagerConnectionProvider - using driver: com.mysql.jdbc.Driver at URL: jdbc:mysql://localhost:3306/webapp
+2012-11-26 16:13:27,942 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.connection.DriverManagerConnectionProvider - connection properties: {user=root, autocommit=true}
+2012-11-26 16:13:27,943 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.connection.DriverManagerConnectionProvider - total checked-out connections: 0
+2012-11-26 16:13:27,943 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.connection.DriverManagerConnectionProvider - opening new JDBC connection
+2012-11-26 16:13:27,958 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.connection.DriverManagerConnectionProvider - created connection to: jdbc:mysql://localhost:3306/webapp, Isolation Level: 4
+2012-11-26 16:13:27,959 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.tool.hbm2ddl.SchemaExport - drop table if exists webapp.ruili_favorite
+2012-11-26 16:13:27,964 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.tool.hbm2ddl.SchemaExport - drop table if exists webapp.ruili_user
+2012-11-26 16:13:27,965 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.tool.hbm2ddl.SchemaExport - create table webapp.ruili_favorite (
+    FavoriteID integer not null,
+    UserID integer,
+    URL varchar(30),
+    ClickCounter integer,
+    Comment varchar(40),
+    primary key (FavoriteID)
+)
+2012-11-26 16:13:27,976 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.tool.hbm2ddl.SchemaExport - create table webapp.ruili_user (
+    UserID integer not null,
+    EmailAdd varchar(30),
+    FirstName varchar(30),
+    LastName varchar(30),
+    Password varchar(15),
+    primary key (UserID)
+)
+2012-11-26 16:13:27,988 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.tool.hbm2ddl.SchemaExport - schema export complete
+2012-11-26 16:13:27,988 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.connection.DriverManagerConnectionProvider - returning connection to pool, pool size: 1
+2012-11-26 16:13:27,989 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.connection.DriverManagerConnectionProvider - cleaning up connection pool: jdbc:mysql://localhost:3306/webapp
+2012-11-26 16:13:27,990 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.dialect.Dialect - Using dialect: org.hibernate.dialect.MySQLDialect
+2012-11-26 16:13:27,990 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.cfg.Configuration - processing extends queue
+2012-11-26 16:13:27,991 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.cfg.Configuration - processing collection mappings
+2012-11-26 16:13:27,991 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.cfg.Configuration - processing association property references
+2012-11-26 16:13:27,991 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.cfg.Configuration - processing foreign key constraints
+2012-11-26 16:13:27,991 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.cfg.Configuration - processing extends queue
+2012-11-26 16:13:27,991 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.cfg.Configuration - processing collection mappings
+2012-11-26 16:13:27,992 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.cfg.Configuration - processing association property references
+2012-11-26 16:13:27,992 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.cfg.Configuration - processing foreign key constraints
+2012-11-26 16:13:27,992 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.impl.SessionFactoryImpl - Checking 0 named queries
+2012-11-26 16:13:28,009 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.impl.SessionImpl - opened session at timestamp: 13539644079
+2012-11-26 16:13:28,010 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.transaction.JDBCTransaction - begin
+2012-11-26 16:13:28,010 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.jdbc.ConnectionManager - opening JDBC connection
+2012-11-26 16:13:28,011 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.connection.DriverManagerConnectionProvider - total checked-out connections: 0
+2012-11-26 16:13:28,011 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.connection.DriverManagerConnectionProvider - using pooled JDBC connection, pool size: 0
+2012-11-26 16:13:28,011 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.transaction.JDBCTransaction - current autocommit status: true
+2012-11-26 16:13:28,011 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.transaction.JDBCTransaction - disabling autocommit
+2012-11-26 16:13:28,013 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.DefaultSaveOrUpdateEventListener - saving transient instance
+2012-11-26 16:13:28,014 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.id.IncrementGenerator - fetching initial value: select max(UserID) from ruili_user
+2012-11-26 16:13:28,014 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.SQL - select max(UserID) from ruili_user
+2012-11-26 16:13:28,024 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.id.IncrementGenerator - first free id: 1
+2012-11-26 16:13:28,025 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractSaveEventListener - generated identifier: 1, using strategy: org.hibernate.id.IncrementGenerator
+2012-11-26 16:13:28,025 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractSaveEventListener - saving [edu.cmu.mse.rui.J2ee.HW8.DataBean.User#1]
+2012-11-26 16:13:28,031 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.transaction.JDBCTransaction - commit
+2012-11-26 16:13:28,032 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.impl.SessionImpl - automatically flushing session
+2012-11-26 16:13:28,032 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - flushing session
+2012-11-26 16:13:28,032 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - processing flush-time cascades
+2012-11-26 16:13:28,033 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - dirty checking collections
+2012-11-26 16:13:28,033 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - Flushing entities and processing referenced collections
+2012-11-26 16:13:28,034 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - Processing unreferenced collections
+2012-11-26 16:13:28,034 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - Scheduling collection removes/(re)creates/updates
+2012-11-26 16:13:28,034 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - Flushed: 1 insertions, 0 updates, 0 deletions to 1 objects
+2012-11-26 16:13:28,034 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+2012-11-26 16:13:28,035 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.pretty.Printer - listing entities:
+2012-11-26 16:13:28,036 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.pretty.Printer - edu.cmu.mse.rui.J2ee.HW8.DataBean.User{lastName=null, userId=1, firstName=null, password=pasw, emailAdd=ruiliwonder}
+2012-11-26 16:13:28,036 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - executing flush
+2012-11-26 16:13:28,036 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.persister.entity.BasicEntityPersister - Inserting entity: [edu.cmu.mse.rui.J2ee.HW8.DataBean.User#1]
+2012-11-26 16:13:28,036 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.jdbc.AbstractBatcher - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+2012-11-26 16:13:28,037 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.SQL - insert into webapp.ruili_user (EmailAdd, FirstName, LastName, Password, UserID) values (?, ?, ?, ?, ?)
+2012-11-26 16:13:28,037 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.jdbc.AbstractBatcher - preparing statement
+2012-11-26 16:13:28,038 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.persister.entity.BasicEntityPersister - Dehydrating entity: [edu.cmu.mse.rui.J2ee.HW8.DataBean.User#1]
+2012-11-26 16:13:28,038 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.type.StringType - binding 'ruiliwonder' to parameter: 1
+2012-11-26 16:13:28,038 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.type.StringType - binding null to parameter: 2
+2012-11-26 16:13:28,038 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.type.StringType - binding null to parameter: 3
+2012-11-26 16:13:28,039 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.type.StringType - binding 'pasw' to parameter: 4
+2012-11-26 16:13:28,039 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.type.IntegerType - binding '1' to parameter: 5
+2012-11-26 16:13:28,039 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.jdbc.AbstractBatcher - Adding to batch
+2012-11-26 16:13:28,040 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.jdbc.AbstractBatcher - Executing batch size: 1
+2012-11-26 16:13:28,041 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.jdbc.AbstractBatcher - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+2012-11-26 16:13:28,041 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.jdbc.AbstractBatcher - closing statement
+2012-11-26 16:13:28,041 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - post flush
+2012-11-26 16:13:28,041 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.jdbc.JDBCContext - before transaction completion
+2012-11-26 16:13:28,042 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.impl.SessionImpl - before transaction completion
+2012-11-26 16:13:28,042 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.transaction.JDBCTransaction - re-enabling autocommit
+2012-11-26 16:13:28,042 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.transaction.JDBCTransaction - committed JDBC Connection
+2012-11-26 16:13:28,043 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.jdbc.JDBCContext - after transaction completion
+2012-11-26 16:13:28,043 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.impl.SessionImpl - after transaction completion
+2012-11-26 16:13:28,043 { yyyy MMM dd HH:mm:ss } DEBUG edu.cmu.mse.rui.J2ee.HW8.DAO.UserDAO - save successful
+2012-11-26 16:13:42,281 { yyyy MMM dd HH:mm:ss } DEBUG edu.cmu.mse.rui.J2ee.HW8.DAO.FavoriteDAO - saving Favorite instance
+2012-11-26 16:13:42,281 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.transaction.JDBCTransaction - begin
+2012-11-26 16:13:42,281 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.transaction.JDBCTransaction - current autocommit status: true
+2012-11-26 16:13:42,282 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.transaction.JDBCTransaction - disabling autocommit
+2012-11-26 16:13:42,282 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.DefaultSaveOrUpdateEventListener - saving transient instance
+2012-11-26 16:13:42,282 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.id.IncrementGenerator - fetching initial value: select max(FavoriteID) from ruili_favorite
+2012-11-26 16:13:42,282 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.SQL - select max(FavoriteID) from ruili_favorite
+2012-11-26 16:13:42,283 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.id.IncrementGenerator - first free id: 1
+2012-11-26 16:13:42,284 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractSaveEventListener - generated identifier: 1, using strategy: org.hibernate.id.IncrementGenerator
+2012-11-26 16:13:42,284 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractSaveEventListener - saving [edu.cmu.mse.rui.J2ee.HW8.DataBean.Favorite#1]
+2012-11-26 16:13:42,284 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.transaction.JDBCTransaction - commit
+2012-11-26 16:13:42,284 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.impl.SessionImpl - automatically flushing session
+2012-11-26 16:13:42,284 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - flushing session
+2012-11-26 16:13:42,285 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - processing flush-time cascades
+2012-11-26 16:13:42,285 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - dirty checking collections
+2012-11-26 16:13:42,285 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - Flushing entities and processing referenced collections
+2012-11-26 16:13:42,285 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - Processing unreferenced collections
+2012-11-26 16:13:42,285 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - Scheduling collection removes/(re)creates/updates
+2012-11-26 16:13:42,285 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - Flushed: 1 insertions, 0 updates, 0 deletions to 2 objects
+2012-11-26 16:13:42,286 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+2012-11-26 16:13:42,286 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.pretty.Printer - listing entities:
+2012-11-26 16:13:42,286 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.pretty.Printer - edu.cmu.mse.rui.J2ee.HW8.DataBean.User{lastName=null, userId=1, firstName=null, password=pasw, emailAdd=ruiliwonder}
+2012-11-26 16:13:42,286 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.pretty.Printer - edu.cmu.mse.rui.J2ee.HW8.DataBean.Favorite{favoriteId=1, userId=1, comment=comment, clickCounter=0, url=url}
+2012-11-26 16:13:42,286 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - executing flush
+2012-11-26 16:13:42,287 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.persister.entity.BasicEntityPersister - Inserting entity: [edu.cmu.mse.rui.J2ee.HW8.DataBean.Favorite#1]
+2012-11-26 16:13:42,287 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.jdbc.AbstractBatcher - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+2012-11-26 16:13:42,287 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.SQL - insert into webapp.ruili_favorite (UserID, URL, ClickCounter, Comment, FavoriteID) values (?, ?, ?, ?, ?)
+2012-11-26 16:13:42,287 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.jdbc.AbstractBatcher - preparing statement
+2012-11-26 16:13:42,288 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.persister.entity.BasicEntityPersister - Dehydrating entity: [edu.cmu.mse.rui.J2ee.HW8.DataBean.Favorite#1]
+2012-11-26 16:13:42,288 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.type.IntegerType - binding '1' to parameter: 1
+2012-11-26 16:13:42,288 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.type.StringType - binding 'url' to parameter: 2
+2012-11-26 16:13:42,288 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.type.IntegerType - binding '0' to parameter: 3
+2012-11-26 16:13:42,289 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.type.StringType - binding 'comment' to parameter: 4
+2012-11-26 16:13:42,289 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.type.IntegerType - binding '1' to parameter: 5
+2012-11-26 16:13:42,289 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.jdbc.AbstractBatcher - Adding to batch
+2012-11-26 16:13:42,289 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.jdbc.AbstractBatcher - Executing batch size: 1
+2012-11-26 16:13:42,291 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.jdbc.AbstractBatcher - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+2012-11-26 16:13:42,292 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.jdbc.AbstractBatcher - closing statement
+2012-11-26 16:13:42,292 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - post flush
+2012-11-26 16:13:42,292 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.jdbc.JDBCContext - before transaction completion
+2012-11-26 16:13:42,292 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.impl.SessionImpl - before transaction completion
+2012-11-26 16:13:42,293 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.transaction.JDBCTransaction - re-enabling autocommit
+2012-11-26 16:13:42,293 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.transaction.JDBCTransaction - committed JDBC Connection
+2012-11-26 16:13:42,293 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.jdbc.JDBCContext - after transaction completion
+2012-11-26 16:13:42,293 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.impl.SessionImpl - after transaction completion
+2012-11-26 16:13:42,293 { yyyy MMM dd HH:mm:ss } DEBUG edu.cmu.mse.rui.J2ee.HW8.DAO.FavoriteDAO - save successful
+2012-11-26 16:14:34,537 { yyyy MMM dd HH:mm:ss } DEBUG edu.cmu.mse.rui.J2ee.HW8.DAO.FavoriteDAO - query all the user favorites
+2012-11-26 16:14:42,807 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.transaction.JDBCTransaction - begin
+2012-11-26 16:14:42,807 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.transaction.JDBCTransaction - current autocommit status: true
+2012-11-26 16:14:42,807 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.transaction.JDBCTransaction - disabling autocommit
+2012-11-26 16:14:42,809 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.impl.SessionImpl - find: from Favorite  where UserID=1
+2012-11-26 16:14:42,809 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.engine.QueryParameters - named parameters: {}
+2012-11-26 16:14:42,837 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.hql.ast.QueryTranslatorImpl - parse() - HQL: from edu.cmu.mse.rui.J2ee.HW8.DataBean.Favorite  where UserID=1
+2012-11-26 16:14:42,845 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.hql.ast.AST - --- HQL AST ---
+ \-[QUERY] 'query'
+    +-[SELECT_FROM] 'SELECT_FROM'
+    |  \-[FROM] 'from'
+    |     \-[RANGE] 'RANGE'
+    |        \-[DOT] '.'
+    |           +-[DOT] '.'
+    |           |  +-[DOT] '.'
+    |           |  |  +-[DOT] '.'
+    |           |  |  |  +-[DOT] '.'
+    |           |  |  |  |  +-[DOT] '.'
+    |           |  |  |  |  |  +-[DOT] '.'
+    |           |  |  |  |  |  |  +-[IDENT] 'edu'
+    |           |  |  |  |  |  |  \-[IDENT] 'cmu'
+    |           |  |  |  |  |  \-[IDENT] 'mse'
+    |           |  |  |  |  \-[IDENT] 'rui'
+    |           |  |  |  \-[IDENT] 'J2ee'
+    |           |  |  \-[IDENT] 'HW8'
+    |           |  \-[IDENT] 'DataBean'
+    |           \-[IDENT] 'Favorite'
+    \-[WHERE] 'where'
+       \-[EQ] '='
+          +-[IDENT] 'UserID'
+          \-[NUM_INT] '1'
+
+2012-11-26 16:14:42,845 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.hql.ast.ErrorCounter - throwQueryException() : no errors
+2012-11-26 16:14:42,861 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.hql.antlr.HqlSqlBaseWalker - query() << begin, level = 1
+2012-11-26 16:14:42,871 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.hql.ast.FromElement - FromClause{level=1} :  edu.cmu.mse.rui.J2ee.HW8.DataBean.Favorite (no alias) -> favorite0_
+2012-11-26 16:14:42,874 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.hql.antlr.HqlSqlBaseWalker - query() : finishing up , level = 1
+2012-11-26 16:14:42,874 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.hql.ast.HqlSqlWalker - processQuery() :  ( SELECT ( FromClause{level=1} webapp.ruili_favorite favorite0_ ) ( where ( = UserID 1 ) ) )
+2012-11-26 16:14:42,878 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.hql.ast.HqlSqlWalker - Derived SELECT clause created.
+2012-11-26 16:14:42,881 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.hql.ast.JoinProcessor - Using FROM fragment [webapp.ruili_favorite favorite0_]
+2012-11-26 16:14:42,881 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.hql.antlr.HqlSqlBaseWalker - query() >> end, level = 1
+2012-11-26 16:14:42,883 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.hql.ast.AST - --- SQL AST ---
+ \-[SELECT] QueryNode: 'SELECT'  querySpaces (webapp.ruili_favorite)
+    +-[SELECT_CLAUSE] SelectClause: '{derived select clause}'
+    |  +-[SELECT_EXPR] SelectExpressionImpl: 'favorite0_.FavoriteID as FavoriteID' {FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=null,role=null,tableName=webapp.ruili_favorite,tableAlias=favorite0_,colums={,className=edu.cmu.mse.rui.J2ee.HW8.DataBean.Favorite}}}
+    |  \-[SQL_TOKEN] SqlFragment: 'favorite0_.UserID as UserID0_, favorite0_.URL as URL0_, favorite0_.ClickCounter as ClickCou4_0_, favorite0_.Comment as Comment0_'
+    +-[FROM] FromClause: 'from' FromClause{level=1, fromElementCounter=1, fromElements=1, fromElementByClassAlias=[], fromElementByTableAlias=[favorite0_], fromElementsByPath=[], collectionJoinFromElementsByPath=[], impliedElements=[]}
+    |  \-[FROM_FRAGMENT] FromElement: 'webapp.ruili_favorite favorite0_' FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=null,role=null,tableName=webapp.ruili_favorite,tableAlias=favorite0_,colums={,className=edu.cmu.mse.rui.J2ee.HW8.DataBean.Favorite}}
+    \-[WHERE] SqlNode: 'where'
+       \-[EQ] SqlNode: '='
+          +-[IDENT] IdentNode: 'UserID' {originalText=UserID}
+          \-[NUM_INT] LiteralNode: '1'
+
+2012-11-26 16:14:42,883 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.hql.ast.ErrorCounter - throwQueryException() : no errors
+2012-11-26 16:14:42,889 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.hql.ast.QueryTranslatorImpl - HQL: from edu.cmu.mse.rui.J2ee.HW8.DataBean.Favorite  where UserID=1
+2012-11-26 16:14:42,889 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.hql.ast.QueryTranslatorImpl - SQL: select favorite0_.FavoriteID as FavoriteID, favorite0_.UserID as UserID0_, favorite0_.URL as URL0_, favorite0_.ClickCounter as ClickCou4_0_, favorite0_.Comment as Comment0_ from webapp.ruili_favorite favorite0_ where UserID=1
+2012-11-26 16:14:42,889 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.hql.ast.ErrorCounter - throwQueryException() : no errors
+2012-11-26 16:14:42,891 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - flushing session
+2012-11-26 16:14:42,892 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - processing flush-time cascades
+2012-11-26 16:14:42,892 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - dirty checking collections
+2012-11-26 16:14:42,892 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - Flushing entities and processing referenced collections
+2012-11-26 16:14:42,892 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - Processing unreferenced collections
+2012-11-26 16:14:42,892 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - Scheduling collection removes/(re)creates/updates
+2012-11-26 16:14:42,892 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 0 deletions to 2 objects
+2012-11-26 16:14:42,893 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+2012-11-26 16:14:42,893 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.pretty.Printer - listing entities:
+2012-11-26 16:14:42,893 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.pretty.Printer - edu.cmu.mse.rui.J2ee.HW8.DataBean.User{lastName=null, userId=1, firstName=null, password=pasw, emailAdd=ruiliwonder}
+2012-11-26 16:14:42,893 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.pretty.Printer - edu.cmu.mse.rui.J2ee.HW8.DataBean.Favorite{favoriteId=1, userId=1, comment=comment, clickCounter=0, url=url}
+2012-11-26 16:14:42,893 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.DefaultAutoFlushEventListener - Dont need to execute flush
+2012-11-26 16:14:42,894 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.jdbc.AbstractBatcher - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+2012-11-26 16:14:42,894 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.SQL - select favorite0_.FavoriteID as FavoriteID, favorite0_.UserID as UserID0_, favorite0_.URL as URL0_, favorite0_.ClickCounter as ClickCou4_0_, favorite0_.Comment as Comment0_ from webapp.ruili_favorite favorite0_ where UserID=1
+2012-11-26 16:14:42,894 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.jdbc.AbstractBatcher - preparing statement
+2012-11-26 16:14:42,896 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.jdbc.AbstractBatcher - about to open ResultSet (open ResultSets: 0, globally: 0)
+2012-11-26 16:14:42,896 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.loader.Loader - processing result set
+2012-11-26 16:14:42,896 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.loader.Loader - result set row: 0
+2012-11-26 16:14:42,897 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.type.IntegerType - returning '1' as column: FavoriteID
+2012-11-26 16:14:42,897 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.loader.Loader - result row: EntityKey[edu.cmu.mse.rui.J2ee.HW8.DataBean.Favorite#1]
+2012-11-26 16:14:42,897 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.loader.Loader - done processing result set (1 rows)
+2012-11-26 16:14:42,897 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.jdbc.AbstractBatcher - about to close ResultSet (open ResultSets: 1, globally: 1)
+2012-11-26 16:14:42,897 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.jdbc.AbstractBatcher - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+2012-11-26 16:14:42,898 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.jdbc.AbstractBatcher - closing statement
+2012-11-26 16:14:42,899 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.loader.Loader - total objects hydrated: 0
+2012-11-26 16:14:42,905 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.engine.PersistenceContext - initializing non-lazy collections
+2012-11-26 16:14:42,905 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.connection.DriverManagerConnectionProvider - cleaning up connection pool: jdbc:mysql://localhost:3306/webapp
+2012-11-26 16:14:42,905 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.transaction.JDBCTransaction - commit
+2012-11-26 16:14:42,906 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.impl.SessionImpl - automatically flushing session
+2012-11-26 16:14:42,906 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - flushing session
+2012-11-26 16:14:42,906 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - processing flush-time cascades
+2012-11-26 16:14:42,906 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - dirty checking collections
+2012-11-26 16:14:42,907 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - Flushing entities and processing referenced collections
+2012-11-26 16:14:42,907 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - Processing unreferenced collections
+2012-11-26 16:14:42,907 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - Scheduling collection removes/(re)creates/updates
+2012-11-26 16:14:42,907 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 0 deletions to 2 objects
+2012-11-26 16:14:42,907 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+2012-11-26 16:14:42,907 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.pretty.Printer - listing entities:
+2012-11-26 16:14:42,907 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.pretty.Printer - edu.cmu.mse.rui.J2ee.HW8.DataBean.User{lastName=null, userId=1, firstName=null, password=pasw, emailAdd=ruiliwonder}
+2012-11-26 16:14:42,908 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.pretty.Printer - edu.cmu.mse.rui.J2ee.HW8.DataBean.Favorite{favoriteId=1, userId=1, comment=comment, clickCounter=0, url=url}
+2012-11-26 16:14:42,908 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - executing flush
+2012-11-26 16:14:42,908 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - post flush
+2012-11-26 16:14:42,908 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.jdbc.JDBCContext - before transaction completion
+2012-11-26 16:14:42,908 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.impl.SessionImpl - before transaction completion
+2012-11-26 16:14:42,909 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.transaction.JDBCTransaction - re-enabling autocommit
+2012-11-26 16:14:42,909 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.transaction.JDBCTransaction - committed JDBC Connection
+2012-11-26 16:14:42,909 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.jdbc.JDBCContext - after transaction completion
+2012-11-26 16:14:42,909 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.impl.SessionImpl - after transaction completion
+2012-11-26 16:14:42,909 { yyyy MMM dd HH:mm:ss } DEBUG edu.cmu.mse.rui.J2ee.HW8.DAO.FavoriteDAO - update Favorite instance by increase count by 1
+2012-11-26 16:14:42,910 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.transaction.JDBCTransaction - begin
+2012-11-26 16:14:42,910 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.transaction.JDBCTransaction - current autocommit status: true
+2012-11-26 16:14:42,910 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.transaction.JDBCTransaction - disabling autocommit
+2012-11-26 16:14:42,910 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.impl.SessionImpl - executeUpdate: update Favorite set clickCounter=clickCounter+1 where id=1
+2012-11-26 16:14:42,910 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.engine.QueryParameters - named parameters: {}
+2012-11-26 16:14:42,911 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.hql.ast.QueryTranslatorImpl - parse() - HQL: update Favorite set clickCounter=clickCounter+1 where id=1
+2012-11-26 16:14:42,912 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.hql.ast.AST - --- HQL AST ---
+ \-[UPDATE] 'update'
+    +-[FROM] 'FROM'
+    |  \-[RANGE] 'RANGE'
+    |     \-[IDENT] 'Favorite'
+    +-[SET] 'set'
+    |  \-[EQ] '='
+    |     +-[IDENT] 'clickCounter'
+    |     \-[PLUS] '+'
+    |        +-[IDENT] 'clickCounter'
+    |        \-[NUM_INT] '1'
+    \-[WHERE] 'where'
+       \-[EQ] '='
+          +-[IDENT] 'id'
+          \-[NUM_INT] '1'
+
+2012-11-26 16:14:42,913 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.hql.ast.ErrorCounter - throwQueryException() : no errors
+2012-11-26 16:14:42,914 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.hql.ast.FromElement - FromClause{level=1} :  Favorite (no alias) -> favorite0_
+2012-11-26 16:14:42,915 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.hql.ast.FromReferenceNode - Resolved :  clickCounter -> ClickCounter
+2012-11-26 16:14:42,915 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.hql.ast.FromReferenceNode - Resolved :  clickCounter -> ClickCounter
+2012-11-26 16:14:42,916 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.hql.ast.FromReferenceNode - Resolved :  id -> FavoriteID
+2012-11-26 16:14:42,917 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.hql.ast.AST - --- SQL AST ---
+ \-[UPDATE] QueryNode: 'update'  querySpaces (webapp.ruili_favorite)
+    +-[FROM] FromClause: 'FROM' FromClause{level=1, fromElementCounter=1, fromElements=1, fromElementByClassAlias=[], fromElementByTableAlias=[favorite0_], fromElementsByPath=[], collectionJoinFromElementsByPath=[], impliedElements=[]}
+    |  \-[FROM_FRAGMENT] FromElement: 'webapp.ruili_favorite' FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=null,role=null,tableName=webapp.ruili_favorite,tableAlias=favorite0_,colums={,className=Favorite}}
+    +-[SET] SqlNode: 'set'
+    |  \-[EQ] SqlNode: '='
+    |     +-[SQL_TOKEN] IdentNode: 'ClickCounter' {originalText=clickCounter}
+    |     \-[PLUS] ArithmeticNode: '+'
+    |        +-[SQL_TOKEN] IdentNode: 'ClickCounter' {originalText=clickCounter}
+    |        \-[NUM_INT] LiteralNode: '1'
+    \-[WHERE] SqlNode: 'where'
+       \-[EQ] SqlNode: '='
+          +-[SQL_TOKEN] IdentNode: 'FavoriteID' {originalText=id}
+          \-[NUM_INT] LiteralNode: '1'
+
+2012-11-26 16:14:42,917 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.hql.ast.ErrorCounter - throwQueryException() : no errors
+2012-11-26 16:14:42,917 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.hql.ast.QueryTranslatorImpl - HQL: update Favorite set clickCounter=clickCounter+1 where id=1
+2012-11-26 16:14:42,918 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.hql.ast.QueryTranslatorImpl - SQL: update webapp.ruili_favorite set ClickCounter=ClickCounter+1 where FavoriteID=1
+2012-11-26 16:14:42,918 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.hql.ast.ErrorCounter - throwQueryException() : no errors
+2012-11-26 16:14:42,919 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - flushing session
+2012-11-26 16:14:42,919 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - processing flush-time cascades
+2012-11-26 16:14:42,919 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - dirty checking collections
+2012-11-26 16:14:42,919 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - Flushing entities and processing referenced collections
+2012-11-26 16:14:42,919 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - Processing unreferenced collections
+2012-11-26 16:14:42,919 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - Scheduling collection removes/(re)creates/updates
+2012-11-26 16:14:42,920 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 0 deletions to 2 objects
+2012-11-26 16:14:42,920 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+2012-11-26 16:14:42,920 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.pretty.Printer - listing entities:
+2012-11-26 16:14:42,920 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.pretty.Printer - edu.cmu.mse.rui.J2ee.HW8.DataBean.User{lastName=null, userId=1, firstName=null, password=pasw, emailAdd=ruiliwonder}
+2012-11-26 16:14:42,920 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.pretty.Printer - edu.cmu.mse.rui.J2ee.HW8.DataBean.Favorite{favoriteId=1, userId=1, comment=comment, clickCounter=0, url=url}
+2012-11-26 16:14:42,920 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.DefaultAutoFlushEventListener - Dont need to execute flush
+2012-11-26 16:14:42,921 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.jdbc.AbstractBatcher - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+2012-11-26 16:14:42,921 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.SQL - update webapp.ruili_favorite set ClickCounter=ClickCounter+1 where FavoriteID=1
+2012-11-26 16:14:42,921 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.jdbc.AbstractBatcher - preparing statement
+2012-11-26 16:14:42,922 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.jdbc.AbstractBatcher - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+2012-11-26 16:14:42,922 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.jdbc.AbstractBatcher - closing statement
+2012-11-26 16:14:42,922 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.transaction.JDBCTransaction - commit
+2012-11-26 16:14:42,922 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.impl.SessionImpl - automatically flushing session
+2012-11-26 16:14:42,922 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - flushing session
+2012-11-26 16:14:42,923 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - processing flush-time cascades
+2012-11-26 16:14:42,923 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - dirty checking collections
+2012-11-26 16:14:42,923 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - Flushing entities and processing referenced collections
+2012-11-26 16:14:42,923 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - Processing unreferenced collections
+2012-11-26 16:14:42,923 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - Scheduling collection removes/(re)creates/updates
+2012-11-26 16:14:42,923 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 0 deletions to 2 objects
+2012-11-26 16:14:42,923 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+2012-11-26 16:14:42,924 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.pretty.Printer - listing entities:
+2012-11-26 16:14:42,924 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.pretty.Printer - edu.cmu.mse.rui.J2ee.HW8.DataBean.User{lastName=null, userId=1, firstName=null, password=pasw, emailAdd=ruiliwonder}
+2012-11-26 16:14:42,924 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.pretty.Printer - edu.cmu.mse.rui.J2ee.HW8.DataBean.Favorite{favoriteId=1, userId=1, comment=comment, clickCounter=0, url=url}
+2012-11-26 16:14:42,924 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - executing flush
+2012-11-26 16:14:42,924 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - post flush
+2012-11-26 16:14:42,924 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.jdbc.JDBCContext - before transaction completion
+2012-11-26 16:14:42,924 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.impl.SessionImpl - before transaction completion
+2012-11-26 16:14:42,927 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.transaction.JDBCTransaction - re-enabling autocommit
+2012-11-26 16:14:42,927 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.transaction.JDBCTransaction - committed JDBC Connection
+2012-11-26 16:14:42,927 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.jdbc.JDBCContext - after transaction completion
+2012-11-26 16:14:42,928 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.impl.SessionImpl - after transaction completion
+2012-11-26 16:14:42,928 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - flushing session
+2012-11-26 16:14:42,928 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - processing flush-time cascades
+2012-11-26 16:14:42,928 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - dirty checking collections
+2012-11-26 16:14:42,928 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - Flushing entities and processing referenced collections
+2012-11-26 16:14:42,928 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - Processing unreferenced collections
+2012-11-26 16:14:42,929 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - Scheduling collection removes/(re)creates/updates
+2012-11-26 16:14:42,929 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 0 deletions to 2 objects
+2012-11-26 16:14:42,929 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+2012-11-26 16:14:42,929 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.pretty.Printer - listing entities:
+2012-11-26 16:14:42,929 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.pretty.Printer - edu.cmu.mse.rui.J2ee.HW8.DataBean.User{lastName=null, userId=1, firstName=null, password=pasw, emailAdd=ruiliwonder}
+2012-11-26 16:14:42,929 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.pretty.Printer - edu.cmu.mse.rui.J2ee.HW8.DataBean.Favorite{favoriteId=1, userId=1, comment=comment, clickCounter=0, url=url}
+2012-11-26 16:14:42,929 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - executing flush
+2012-11-26 16:14:42,930 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - post flush
+2012-11-26 16:14:45,287 { yyyy MMM dd HH:mm:ss } DEBUG edu.cmu.mse.rui.J2ee.HW8.DAO.FavoriteDAO - query all the user favorites
+2012-11-26 16:14:45,288 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.transaction.JDBCTransaction - begin
+2012-11-26 16:14:45,288 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.transaction.JDBCTransaction - current autocommit status: true
+2012-11-26 16:14:45,288 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.transaction.JDBCTransaction - disabling autocommit
+2012-11-26 16:14:45,288 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.impl.SessionImpl - find: from Favorite  where UserID=1
+2012-11-26 16:14:45,288 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.engine.QueryParameters - named parameters: {}
+2012-11-26 16:14:45,289 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.hql.ast.QueryTranslatorImpl - compile() : The query is already compiled, skipping...
+2012-11-26 16:14:45,289 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - flushing session
+2012-11-26 16:14:45,289 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - processing flush-time cascades
+2012-11-26 16:14:45,289 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - dirty checking collections
+2012-11-26 16:14:45,289 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - Flushing entities and processing referenced collections
+2012-11-26 16:14:45,290 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - Processing unreferenced collections
+2012-11-26 16:14:45,290 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - Scheduling collection removes/(re)creates/updates
+2012-11-26 16:14:45,291 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 0 deletions to 2 objects
+2012-11-26 16:14:45,291 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+2012-11-26 16:14:45,291 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.pretty.Printer - listing entities:
+2012-11-26 16:14:45,291 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.pretty.Printer - edu.cmu.mse.rui.J2ee.HW8.DataBean.User{lastName=null, userId=1, firstName=null, password=pasw, emailAdd=ruiliwonder}
+2012-11-26 16:14:45,291 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.pretty.Printer - edu.cmu.mse.rui.J2ee.HW8.DataBean.Favorite{favoriteId=1, userId=1, comment=comment, clickCounter=0, url=url}
+2012-11-26 16:14:45,292 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.DefaultAutoFlushEventListener - Dont need to execute flush
+2012-11-26 16:14:45,292 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.jdbc.AbstractBatcher - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+2012-11-26 16:14:45,292 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.SQL - select favorite0_.FavoriteID as FavoriteID, favorite0_.UserID as UserID0_, favorite0_.URL as URL0_, favorite0_.ClickCounter as ClickCou4_0_, favorite0_.Comment as Comment0_ from webapp.ruili_favorite favorite0_ where UserID=1
+2012-11-26 16:14:45,292 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.jdbc.AbstractBatcher - preparing statement
+2012-11-26 16:14:45,293 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.jdbc.AbstractBatcher - about to open ResultSet (open ResultSets: 0, globally: 0)
+2012-11-26 16:14:45,293 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.loader.Loader - processing result set
+2012-11-26 16:14:45,293 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.loader.Loader - result set row: 0
+2012-11-26 16:14:45,294 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.type.IntegerType - returning '1' as column: FavoriteID
+2012-11-26 16:14:45,294 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.loader.Loader - result row: EntityKey[edu.cmu.mse.rui.J2ee.HW8.DataBean.Favorite#1]
+2012-11-26 16:14:45,294 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.loader.Loader - done processing result set (1 rows)
+2012-11-26 16:14:45,294 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.jdbc.AbstractBatcher - about to close ResultSet (open ResultSets: 1, globally: 1)
+2012-11-26 16:14:45,294 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.jdbc.AbstractBatcher - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+2012-11-26 16:14:45,295 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.jdbc.AbstractBatcher - closing statement
+2012-11-26 16:14:45,295 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.loader.Loader - total objects hydrated: 0
+2012-11-26 16:14:45,295 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.engine.PersistenceContext - initializing non-lazy collections
+2012-11-26 16:14:45,295 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.transaction.JDBCTransaction - commit
+2012-11-26 16:14:45,295 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.impl.SessionImpl - automatically flushing session
+2012-11-26 16:14:45,295 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - flushing session
+2012-11-26 16:14:45,296 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - processing flush-time cascades
+2012-11-26 16:14:45,296 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - dirty checking collections
+2012-11-26 16:14:45,296 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - Flushing entities and processing referenced collections
+2012-11-26 16:14:45,297 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - Processing unreferenced collections
+2012-11-26 16:14:45,297 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - Scheduling collection removes/(re)creates/updates
+2012-11-26 16:14:45,297 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 0 deletions to 2 objects
+2012-11-26 16:14:45,297 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+2012-11-26 16:14:45,297 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.pretty.Printer - listing entities:
+2012-11-26 16:14:45,297 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.pretty.Printer - edu.cmu.mse.rui.J2ee.HW8.DataBean.User{lastName=null, userId=1, firstName=null, password=pasw, emailAdd=ruiliwonder}
+2012-11-26 16:14:45,298 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.pretty.Printer - edu.cmu.mse.rui.J2ee.HW8.DataBean.Favorite{favoriteId=1, userId=1, comment=comment, clickCounter=0, url=url}
+2012-11-26 16:14:45,298 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - executing flush
+2012-11-26 16:14:45,298 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - post flush
+2012-11-26 16:14:45,298 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.jdbc.JDBCContext - before transaction completion
+2012-11-26 16:14:45,298 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.impl.SessionImpl - before transaction completion
+2012-11-26 16:14:45,299 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.transaction.JDBCTransaction - re-enabling autocommit
+2012-11-26 16:14:45,299 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.transaction.JDBCTransaction - committed JDBC Connection
+2012-11-26 16:14:45,299 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.jdbc.JDBCContext - after transaction completion
+2012-11-26 16:14:45,299 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.impl.SessionImpl - after transaction completion
+2012-11-26 16:19:04,227 { yyyy MMM dd HH:mm:ss } DEBUG edu.cmu.mse.rui.J2ee.HW8.DAO.UserDAO - saving User instance
+2012-11-26 16:19:04,247 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.cfg.Environment - Hibernate 3.0.5
+2012-11-26 16:19:04,248 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.cfg.Environment - hibernate.properties not found
+2012-11-26 16:19:04,249 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.cfg.Environment - using CGLIB reflection optimizer
+2012-11-26 16:19:04,250 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.cfg.Environment - using JDK 1.4 java.sql.Timestamp handling
+2012-11-26 16:19:04,292 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.cfg.Configuration - configuring from resource: /hibernate.cfg.xml
+2012-11-26 16:19:04,292 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.cfg.Configuration - Configuration resource: /hibernate.cfg.xml
+2012-11-26 16:19:04,431 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.util.DTDEntityResolver - trying to locate http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd in classpath under org/hibernate/
+2012-11-26 16:19:04,432 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.util.DTDEntityResolver - found http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd in classpath
+2012-11-26 16:19:04,453 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.cfg.Configuration - dialect=org.hibernate.dialect.MySQLDialect
+2012-11-26 16:19:04,453 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.cfg.Configuration - connection.url=jdbc:mysql://localhost:3306/webapp
+2012-11-26 16:19:04,454 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.cfg.Configuration - connection.username=root
+2012-11-26 16:19:04,454 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.cfg.Configuration - connection.driver_class=com.mysql.jdbc.Driver
+2012-11-26 16:19:04,455 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.cfg.Configuration - myeclipse.connection.profile=com.mysql.jdbc.Driver
+2012-11-26 16:19:04,455 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.cfg.Configuration - hibernate.hbm2ddl.auto=create-drop
+2012-11-26 16:19:04,455 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.cfg.Configuration - hibernate.connection.autocommit=true
+2012-11-26 16:19:04,455 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.cfg.Configuration - hibernate.cache.use_second_level_cache=true
+2012-11-26 16:19:04,456 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.cfg.Configuration - cache.provider_class=org.hibernate.cache.NoCacheProvider
+2012-11-26 16:19:04,456 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.cfg.Configuration - null<-org.dom4j.tree.DefaultAttribute@5a08145f [Attribute: name resource value "Favorite.hbm.xml"]
+2012-11-26 16:19:04,456 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.cfg.Configuration - Mapping resource: Favorite.hbm.xml
+2012-11-26 16:19:04,458 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.util.DTDEntityResolver - trying to locate http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd in classpath under org/hibernate/
+2012-11-26 16:19:04,459 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.util.DTDEntityResolver - found http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd in classpath
+2012-11-26 16:19:04,522 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.cfg.HbmBinder - Mapping class: edu.cmu.mse.rui.J2ee.HW8.DataBean.Favorite -> ruili_favorite
+2012-11-26 16:19:04,525 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.cfg.HbmBinder - Mapped property: favoriteId -> FavoriteID
+2012-11-26 16:19:04,531 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.cfg.HbmBinder - Mapped property: userId -> UserID
+2012-11-26 16:19:04,531 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.cfg.HbmBinder - Mapped property: url -> URL
+2012-11-26 16:19:04,532 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.cfg.HbmBinder - Mapped property: clickCounter -> ClickCounter
+2012-11-26 16:19:04,532 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.cfg.HbmBinder - Mapped property: comment -> Comment
+2012-11-26 16:19:04,532 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.cfg.Configuration - null<-org.dom4j.tree.DefaultAttribute@70e443f [Attribute: name resource value "User.hbm.xml"]
+2012-11-26 16:19:04,533 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.cfg.Configuration - Mapping resource: User.hbm.xml
+2012-11-26 16:19:04,534 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.util.DTDEntityResolver - trying to locate http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd in classpath under org/hibernate/
+2012-11-26 16:19:04,534 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.util.DTDEntityResolver - found http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd in classpath
+2012-11-26 16:19:04,557 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.cfg.HbmBinder - Mapping class: edu.cmu.mse.rui.J2ee.HW8.DataBean.User -> ruili_user
+2012-11-26 16:19:04,558 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.cfg.HbmBinder - Mapped property: userId -> UserID
+2012-11-26 16:19:04,558 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.cfg.HbmBinder - Mapped property: emailAdd -> EmailAdd
+2012-11-26 16:19:04,558 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.cfg.HbmBinder - Mapped property: firstName -> FirstName
+2012-11-26 16:19:04,565 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.cfg.HbmBinder - Mapped property: lastName -> LastName
+2012-11-26 16:19:04,566 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.cfg.HbmBinder - Mapped property: password -> Password
+2012-11-26 16:19:04,567 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.cfg.Configuration - Configured SessionFactory: null
+2012-11-26 16:19:04,567 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.cfg.Configuration - properties: {java.runtime.name=Java(TM) SE Runtime Environment, hibernate.cache.provider_class=org.hibernate.cache.NoCacheProvider, sun.boot.library.path=/Library/Java/JavaVirtualMachines/jdk1.7.0_09.jdk/Contents/Home/jre/lib, java.vm.version=23.5-b02, hibernate.connection.username=root, gopherProxySet=false, java.vm.vendor=Oracle Corporation, java.vendor.url=http://java.oracle.com/, path.separator=:, java.vm.name=Java HotSpot(TM) 64-Bit Server VM, file.encoding.pkg=sun.io, user.country=US, sun.java.launcher=SUN_STANDARD, sun.os.patch.level=unknown, java.vm.specification.name=Java Virtual Machine Specification, user.dir=/Users/rui/Workspaces/MyEclipse 10/HW8, java.runtime.version=1.7.0_09-b05, java.awt.graphicsenv=sun.awt.CGraphicsEnvironment, java.endorsed.dirs=/Library/Java/JavaVirtualMachines/jdk1.7.0_09.jdk/Contents/Home/jre/lib/endorsed, os.arch=x86_64, hibernate.connection.autocommit=true, java.io.tmpdir=/var/folders/mq/v03pg09d2q93jbwk0pgzq8hw0000gn/T/, line.separator=
+, java.vm.specification.vendor=Oracle Corporation, cache.provider_class=org.hibernate.cache.NoCacheProvider, hibernate.cache.use_second_level_cache=true, os.name=Mac OS X, sun.jnu.encoding=US-ASCII, java.library.path=/Users/rui/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:., hibernate.myeclipse.connection.profile=com.mysql.jdbc.Driver, java.specification.name=Java Platform API Specification, java.class.version=51.0, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, os.version=10.8.2, http.nonProxyHosts=local|*.local|169.254/16|*.169.254/16, user.home=/Users/rui, user.timezone=America/New_York, connection.username=root, java.awt.printerjob=sun.lwawt.macosx.CPrinterJob, file.encoding=MacRoman, java.specification.version=1.7, myeclipse.connection.profile=com.mysql.jdbc.Driver, hibernate.connection.driver_class=com.mysql.jdbc.Driver, java.class.path=/Users/rui/Workspaces/MyEclipse 10/HW8/WebRoot/WEB-INF/classes:/Users/rui/Workspaces/MyEclipse 10/HW8/WebRoot/WEB-INF/lib/mysql-connector-java-5.1.22-bin.jar:/Applications/MyEclipse/MyEclipse 10.app/Contents/Profile/configuration/org.eclipse.osgi/bundles/95/1/.cp/myeclipse-data/3.0/lib/antlr-2.7.5H3.jar:/Applications/MyEclipse/MyEclipse 10.app/Contents/Profile/configuration/org.eclipse.osgi/bundles/95/1/.cp/myeclipse-data/3.0/lib/asm.jar:/Applications/MyEclipse/MyEclipse 10.app/Contents/Profile/configuration/org.eclipse.osgi/bundles/95/1/.cp/myeclipse-data/3.0/lib/asm-attrs.jar:/Applications/MyEclipse/MyEclipse 10.app/Contents/Profile/configuration/org.eclipse.osgi/bundles/95/1/.cp/myeclipse-data/3.0/lib/cglib-2.1.jar:/Applications/MyEclipse/MyEclipse 10.app/Contents/Profile/configuration/org.eclipse.osgi/bundles/95/1/.cp/myeclipse-data/3.0/lib/commons-collections-2.1.1.jar:/Applications/MyEclipse/MyEclipse 10.app/Contents/Profile/configuration/org.eclipse.osgi/bundles/95/1/.cp/myeclipse-data/3.0/lib/commons-logging-1.0.4.jar:/Applications/MyEclipse/MyEclipse 10.app/Contents/Profile/configuration/org.eclipse.osgi/bundles/95/1/.cp/myeclipse-data/3.0/lib/dom4j-1.6.jar:/Applications/MyEclipse/MyEclipse 10.app/Contents/Profile/configuration/org.eclipse.osgi/bundles/95/1/.cp/myeclipse-data/3.0/lib/ehcache-1.1.jar:/Applications/MyEclipse/MyEclipse 10.app/Contents/Profile/configuration/org.eclipse.osgi/bundles/95/1/.cp/myeclipse-data/3.0/lib/hibernate3.jar:/Applications/MyEclipse/MyEclipse 10.app/Contents/Profile/configuration/org.eclipse.osgi/bundles/95/1/.cp/myeclipse-data/3.0/lib/jaas.jar:/Applications/MyEclipse/MyEclipse 10.app/Contents/Profile/configuration/org.eclipse.osgi/bundles/95/1/.cp/myeclipse-data/3.0/lib/jaxen-1.1-beta-4.jar:/Applications/MyEclipse/MyEclipse 10.app/Contents/Profile/configuration/org.eclipse.osgi/bundles/95/1/.cp/myeclipse-data/3.0/lib/jdbc2_0-stdext.jar:/Applications/MyEclipse/MyEclipse 10.app/Contents/Profile/configuration/org.eclipse.osgi/bundles/95/1/.cp/myeclipse-data/3.0/lib/jta.jar:/Applications/MyEclipse/MyEclipse 10.app/Contents/Profile/configuration/org.eclipse.osgi/bundles/95/1/.cp/myeclipse-data/3.0/lib/log4j-1.2.9.jar:/Applications/MyEclipse/MyEclipse 10.app/Contents/Profile/configuration/org.eclipse.osgi/bundles/95/1/.cp/myeclipse-data/3.0/lib/xerces-2.6.2.jar:/Applications/MyEclipse/MyEclipse 10.app/Contents/Profile/configuration/org.eclipse.osgi/bundles/95/1/.cp/myeclipse-data/3.0/lib/xml-apis.jar:/Users/rui/Documents/workspace/libs/log4j/log4j-1.2.17.jar, user.name=rui, java.vm.specification.version=1.7, sun.java.command=DBOperationTest, java.home=/Library/Java/JavaVirtualMachines/jdk1.7.0_09.jdk/Contents/Home/jre, sun.arch.data.model=64, hibernate.connection.url=jdbc:mysql://localhost:3306/webapp, hibernate.dialect=org.hibernate.dialect.MySQLDialect, user.language=en, java.specification.vendor=Oracle Corporation, awt.toolkit=sun.lwawt.macosx.LWCToolkit, hibernate.cglib.use_reflection_optimizer=true, java.vm.info=mixed mode, java.version=1.7.0_09, java.ext.dirs=/Users/rui/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/jdk1.7.0_09.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java, sun.boot.class.path=/Library/Java/JavaVirtualMachines/jdk1.7.0_09.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_09.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_09.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_09.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_09.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_09.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_09.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_09.jdk/Contents/Home/jre/lib/JObjC.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_09.jdk/Contents/Home/jre/classes:/Applications/MyEclipse/Common/plugins/com.genuitec.eclipse.j2eedt.core_10.5.0.me201207171805/data/libraryset/EE_5/javaee.jar:/Applications/MyEclipse/Common/plugins/com.genuitec.eclipse.j2eedt.core_10.5.0.me201207171805/data/libraryset/EE_5/jsf-impl.jar:/Applications/MyEclipse/Common/plugins/com.genuitec.eclipse.j2eedt.core_10.5.0.me201207171805/data/libraryset/EE_5/jsf-api.jar:/Applications/MyEclipse/Common/plugins/com.genuitec.eclipse.j2eedt.core_10.5.0.me201207171805/data/libraryset/EE_5/jstl-1.2.jar, java.vendor=Oracle Corporation, connection.driver_class=com.mysql.jdbc.Driver, file.separator=/, hibernate.hbm2ddl.auto=create-drop, java.vendor.url.bug=http://bugreport.sun.com/bugreport/, sun.io.unicode.encoding=UnicodeBig, sun.cpu.endian=little, socksNonProxyHosts=local|*.local|169.254/16|*.169.254/16, connection.url=jdbc:mysql://localhost:3306/webapp, ftp.nonProxyHosts=local|*.local|169.254/16|*.169.254/16, dialect=org.hibernate.dialect.MySQLDialect, sun.cpu.isalist=}
+2012-11-26 16:19:04,569 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.cfg.Configuration - Preparing to build session factory with filters : {}
+2012-11-26 16:19:04,570 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.cfg.Configuration - processing extends queue
+2012-11-26 16:19:04,570 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.cfg.Configuration - processing collection mappings
+2012-11-26 16:19:04,571 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.cfg.Configuration - processing association property references
+2012-11-26 16:19:04,571 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.cfg.Configuration - processing foreign key constraints
+2012-11-26 16:19:04,604 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.connection.DriverManagerConnectionProvider - Using Hibernate built-in connection pool (not for production use!)
+2012-11-26 16:19:04,605 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.connection.DriverManagerConnectionProvider - Hibernate connection pool size: 20
+2012-11-26 16:19:04,605 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.connection.DriverManagerConnectionProvider - autocommit mode: true
+2012-11-26 16:19:04,611 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.connection.DriverManagerConnectionProvider - using driver: com.mysql.jdbc.Driver at URL: jdbc:mysql://localhost:3306/webapp
+2012-11-26 16:19:04,611 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.connection.DriverManagerConnectionProvider - connection properties: {user=root, autocommit=true}
+2012-11-26 16:19:04,611 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.connection.DriverManagerConnectionProvider - total checked-out connections: 0
+2012-11-26 16:19:04,611 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.connection.DriverManagerConnectionProvider - opening new JDBC connection
+2012-11-26 16:19:04,810 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.connection.DriverManagerConnectionProvider - created connection to: jdbc:mysql://localhost:3306/webapp, Isolation Level: 4
+2012-11-26 16:19:04,811 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.cfg.SettingsFactory - RDBMS: MySQL, version: 5.5.28
+2012-11-26 16:19:04,811 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.cfg.SettingsFactory - JDBC driver: MySQL-AB JDBC Driver, version: mysql-connector-java-5.1.22 ( Revision: ${bzr.revision-id} )
+2012-11-26 16:19:04,812 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.connection.DriverManagerConnectionProvider - returning connection to pool, pool size: 1
+2012-11-26 16:19:04,823 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.dialect.Dialect - Using dialect: org.hibernate.dialect.MySQLDialect
+2012-11-26 16:19:04,827 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.transaction.TransactionFactoryFactory - Using default transaction strategy (direct JDBC transactions)
+2012-11-26 16:19:04,828 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.transaction.TransactionManagerLookupFactory - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+2012-11-26 16:19:04,828 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.cfg.SettingsFactory - Automatic flush during beforeCompletion(): disabled
+2012-11-26 16:19:04,828 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.cfg.SettingsFactory - Automatic session close at end of transaction: disabled
+2012-11-26 16:19:04,829 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.cfg.SettingsFactory - JDBC batch size: 15
+2012-11-26 16:19:04,829 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.cfg.SettingsFactory - JDBC batch updates for versioned data: disabled
+2012-11-26 16:19:04,829 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.cfg.SettingsFactory - Scrollable result sets: enabled
+2012-11-26 16:19:04,830 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.cfg.SettingsFactory - Wrap result sets: disabled
+2012-11-26 16:19:04,830 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.cfg.SettingsFactory - JDBC3 getGeneratedKeys(): enabled
+2012-11-26 16:19:04,830 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.cfg.SettingsFactory - Connection release mode: null
+2012-11-26 16:19:04,831 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.cfg.SettingsFactory - Maximum outer join fetch depth: 2
+2012-11-26 16:19:04,831 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.cfg.SettingsFactory - Default batch fetch size: 1
+2012-11-26 16:19:04,831 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.cfg.SettingsFactory - Generate SQL with comments: disabled
+2012-11-26 16:19:04,831 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.cfg.SettingsFactory - Order SQL updates by primary key: disabled
+2012-11-26 16:19:04,831 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.cfg.SettingsFactory - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+2012-11-26 16:19:04,833 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.hql.ast.ASTQueryTranslatorFactory - Using ASTQueryTranslatorFactory
+2012-11-26 16:19:04,833 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.cfg.SettingsFactory - Query language substitutions: {}
+2012-11-26 16:19:04,833 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.cfg.SettingsFactory - Second-level cache: enabled
+2012-11-26 16:19:04,834 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.cfg.SettingsFactory - Query cache: disabled
+2012-11-26 16:19:04,834 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.cfg.SettingsFactory - Cache provider: org.hibernate.cache.NoCacheProvider
+2012-11-26 16:19:04,835 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.cfg.SettingsFactory - Optimize cache for minimal puts: disabled
+2012-11-26 16:19:04,835 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.cfg.SettingsFactory - Structured second-level cache entries: disabled
+2012-11-26 16:19:04,836 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.exception.SQLExceptionConverterFactory - Using dialect defined converter
+2012-11-26 16:19:04,839 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.cfg.SettingsFactory - Statistics: disabled
+2012-11-26 16:19:04,839 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.cfg.SettingsFactory - Deleted entity synthetic identifier rollback: disabled
+2012-11-26 16:19:04,839 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.cfg.SettingsFactory - Default entity-mode: pojo
+2012-11-26 16:19:05,227 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.impl.SessionFactoryImpl - building session factory
+2012-11-26 16:19:05,228 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.impl.SessionFactoryImpl - Session factory constructed with filter configurations : {}
+2012-11-26 16:19:05,228 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.impl.SessionFactoryImpl - instantiating session factory with properties: {java.runtime.name=Java(TM) SE Runtime Environment, hibernate.cache.provider_class=org.hibernate.cache.NoCacheProvider, sun.boot.library.path=/Library/Java/JavaVirtualMachines/jdk1.7.0_09.jdk/Contents/Home/jre/lib, java.vm.version=23.5-b02, hibernate.connection.username=root, gopherProxySet=false, java.vm.vendor=Oracle Corporation, java.vendor.url=http://java.oracle.com/, path.separator=:, java.vm.name=Java HotSpot(TM) 64-Bit Server VM, file.encoding.pkg=sun.io, user.country=US, sun.java.launcher=SUN_STANDARD, sun.os.patch.level=unknown, java.vm.specification.name=Java Virtual Machine Specification, user.dir=/Users/rui/Workspaces/MyEclipse 10/HW8, java.runtime.version=1.7.0_09-b05, java.awt.graphicsenv=sun.awt.CGraphicsEnvironment, java.endorsed.dirs=/Library/Java/JavaVirtualMachines/jdk1.7.0_09.jdk/Contents/Home/jre/lib/endorsed, os.arch=x86_64, hibernate.connection.autocommit=true, java.io.tmpdir=/var/folders/mq/v03pg09d2q93jbwk0pgzq8hw0000gn/T/, line.separator=
+, java.vm.specification.vendor=Oracle Corporation, cache.provider_class=org.hibernate.cache.NoCacheProvider, hibernate.cache.use_second_level_cache=true, os.name=Mac OS X, sun.jnu.encoding=US-ASCII, java.library.path=/Users/rui/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:., hibernate.myeclipse.connection.profile=com.mysql.jdbc.Driver, java.specification.name=Java Platform API Specification, java.class.version=51.0, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, os.version=10.8.2, http.nonProxyHosts=local|*.local|169.254/16|*.169.254/16, user.home=/Users/rui, user.timezone=America/New_York, connection.username=root, java.awt.printerjob=sun.lwawt.macosx.CPrinterJob, file.encoding=MacRoman, java.specification.version=1.7, myeclipse.connection.profile=com.mysql.jdbc.Driver, hibernate.connection.driver_class=com.mysql.jdbc.Driver, java.class.path=/Users/rui/Workspaces/MyEclipse 10/HW8/WebRoot/WEB-INF/classes:/Users/rui/Workspaces/MyEclipse 10/HW8/WebRoot/WEB-INF/lib/mysql-connector-java-5.1.22-bin.jar:/Applications/MyEclipse/MyEclipse 10.app/Contents/Profile/configuration/org.eclipse.osgi/bundles/95/1/.cp/myeclipse-data/3.0/lib/antlr-2.7.5H3.jar:/Applications/MyEclipse/MyEclipse 10.app/Contents/Profile/configuration/org.eclipse.osgi/bundles/95/1/.cp/myeclipse-data/3.0/lib/asm.jar:/Applications/MyEclipse/MyEclipse 10.app/Contents/Profile/configuration/org.eclipse.osgi/bundles/95/1/.cp/myeclipse-data/3.0/lib/asm-attrs.jar:/Applications/MyEclipse/MyEclipse 10.app/Contents/Profile/configuration/org.eclipse.osgi/bundles/95/1/.cp/myeclipse-data/3.0/lib/cglib-2.1.jar:/Applications/MyEclipse/MyEclipse 10.app/Contents/Profile/configuration/org.eclipse.osgi/bundles/95/1/.cp/myeclipse-data/3.0/lib/commons-collections-2.1.1.jar:/Applications/MyEclipse/MyEclipse 10.app/Contents/Profile/configuration/org.eclipse.osgi/bundles/95/1/.cp/myeclipse-data/3.0/lib/commons-logging-1.0.4.jar:/Applications/MyEclipse/MyEclipse 10.app/Contents/Profile/configuration/org.eclipse.osgi/bundles/95/1/.cp/myeclipse-data/3.0/lib/dom4j-1.6.jar:/Applications/MyEclipse/MyEclipse 10.app/Contents/Profile/configuration/org.eclipse.osgi/bundles/95/1/.cp/myeclipse-data/3.0/lib/ehcache-1.1.jar:/Applications/MyEclipse/MyEclipse 10.app/Contents/Profile/configuration/org.eclipse.osgi/bundles/95/1/.cp/myeclipse-data/3.0/lib/hibernate3.jar:/Applications/MyEclipse/MyEclipse 10.app/Contents/Profile/configuration/org.eclipse.osgi/bundles/95/1/.cp/myeclipse-data/3.0/lib/jaas.jar:/Applications/MyEclipse/MyEclipse 10.app/Contents/Profile/configuration/org.eclipse.osgi/bundles/95/1/.cp/myeclipse-data/3.0/lib/jaxen-1.1-beta-4.jar:/Applications/MyEclipse/MyEclipse 10.app/Contents/Profile/configuration/org.eclipse.osgi/bundles/95/1/.cp/myeclipse-data/3.0/lib/jdbc2_0-stdext.jar:/Applications/MyEclipse/MyEclipse 10.app/Contents/Profile/configuration/org.eclipse.osgi/bundles/95/1/.cp/myeclipse-data/3.0/lib/jta.jar:/Applications/MyEclipse/MyEclipse 10.app/Contents/Profile/configuration/org.eclipse.osgi/bundles/95/1/.cp/myeclipse-data/3.0/lib/log4j-1.2.9.jar:/Applications/MyEclipse/MyEclipse 10.app/Contents/Profile/configuration/org.eclipse.osgi/bundles/95/1/.cp/myeclipse-data/3.0/lib/xerces-2.6.2.jar:/Applications/MyEclipse/MyEclipse 10.app/Contents/Profile/configuration/org.eclipse.osgi/bundles/95/1/.cp/myeclipse-data/3.0/lib/xml-apis.jar:/Users/rui/Documents/workspace/libs/log4j/log4j-1.2.17.jar, user.name=rui, java.vm.specification.version=1.7, sun.java.command=DBOperationTest, java.home=/Library/Java/JavaVirtualMachines/jdk1.7.0_09.jdk/Contents/Home/jre, sun.arch.data.model=64, hibernate.connection.url=jdbc:mysql://localhost:3306/webapp, hibernate.dialect=org.hibernate.dialect.MySQLDialect, user.language=en, java.specification.vendor=Oracle Corporation, awt.toolkit=sun.lwawt.macosx.LWCToolkit, hibernate.cglib.use_reflection_optimizer=true, java.vm.info=mixed mode, java.version=1.7.0_09, java.ext.dirs=/Users/rui/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/jdk1.7.0_09.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java, sun.boot.class.path=/Library/Java/JavaVirtualMachines/jdk1.7.0_09.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_09.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_09.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_09.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_09.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_09.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_09.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_09.jdk/Contents/Home/jre/lib/JObjC.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_09.jdk/Contents/Home/jre/classes:/Applications/MyEclipse/Common/plugins/com.genuitec.eclipse.j2eedt.core_10.5.0.me201207171805/data/libraryset/EE_5/javaee.jar:/Applications/MyEclipse/Common/plugins/com.genuitec.eclipse.j2eedt.core_10.5.0.me201207171805/data/libraryset/EE_5/jsf-impl.jar:/Applications/MyEclipse/Common/plugins/com.genuitec.eclipse.j2eedt.core_10.5.0.me201207171805/data/libraryset/EE_5/jsf-api.jar:/Applications/MyEclipse/Common/plugins/com.genuitec.eclipse.j2eedt.core_10.5.0.me201207171805/data/libraryset/EE_5/jstl-1.2.jar, java.vendor=Oracle Corporation, connection.driver_class=com.mysql.jdbc.Driver, file.separator=/, hibernate.hbm2ddl.auto=create-drop, java.vendor.url.bug=http://bugreport.sun.com/bugreport/, sun.io.unicode.encoding=UnicodeBig, sun.cpu.endian=little, socksNonProxyHosts=local|*.local|169.254/16|*.169.254/16, connection.url=jdbc:mysql://localhost:3306/webapp, ftp.nonProxyHosts=local|*.local|169.254/16|*.169.254/16, dialect=org.hibernate.dialect.MySQLDialect, sun.cpu.isalist=}
+2012-11-26 16:19:05,354 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.persister.entity.BasicEntityPersister - Static SQL for entity: edu.cmu.mse.rui.J2ee.HW8.DataBean.Favorite
+2012-11-26 16:19:05,354 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.persister.entity.BasicEntityPersister -  Version select: select FavoriteID from webapp.ruili_favorite where FavoriteID =?
+2012-11-26 16:19:05,354 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.persister.entity.BasicEntityPersister -  Snapshot select: select favorite_.FavoriteID, favorite_.UserID as UserID0_, favorite_.URL as URL0_, favorite_.ClickCounter as ClickCou4_0_, favorite_.Comment as Comment0_ from webapp.ruili_favorite favorite_ where favorite_.FavoriteID=?
+2012-11-26 16:19:05,355 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.persister.entity.BasicEntityPersister -  Insert 0: insert into webapp.ruili_favorite (UserID, URL, ClickCounter, Comment, FavoriteID) values (?, ?, ?, ?, ?)
+2012-11-26 16:19:05,355 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.persister.entity.BasicEntityPersister -  Update 0: update webapp.ruili_favorite set UserID=?, URL=?, ClickCounter=?, Comment=? where FavoriteID=?
+2012-11-26 16:19:05,355 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.persister.entity.BasicEntityPersister -  Delete 0: delete from webapp.ruili_favorite where FavoriteID=?
+2012-11-26 16:19:05,374 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.persister.entity.BasicEntityPersister - Static SQL for entity: edu.cmu.mse.rui.J2ee.HW8.DataBean.User
+2012-11-26 16:19:05,374 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.persister.entity.BasicEntityPersister -  Version select: select UserID from webapp.ruili_user where UserID =?
+2012-11-26 16:19:05,375 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.persister.entity.BasicEntityPersister -  Snapshot select: select user_.UserID, user_.EmailAdd as EmailAdd1_, user_.FirstName as FirstName1_, user_.LastName as LastName1_, user_.Password as Password1_ from webapp.ruili_user user_ where user_.UserID=?
+2012-11-26 16:19:05,375 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.persister.entity.BasicEntityPersister -  Insert 0: insert into webapp.ruili_user (EmailAdd, FirstName, LastName, Password, UserID) values (?, ?, ?, ?, ?)
+2012-11-26 16:19:05,375 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.persister.entity.BasicEntityPersister -  Update 0: update webapp.ruili_user set EmailAdd=?, FirstName=?, LastName=?, Password=? where UserID=?
+2012-11-26 16:19:05,375 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.persister.entity.BasicEntityPersister -  Delete 0: delete from webapp.ruili_user where UserID=?
+2012-11-26 16:19:05,385 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.loader.entity.EntityLoader - Static select for entity edu.cmu.mse.rui.J2ee.HW8.DataBean.Favorite: select favorite0_.FavoriteID as FavoriteID0_, favorite0_.UserID as UserID0_0_, favorite0_.URL as URL0_0_, favorite0_.ClickCounter as ClickCou4_0_0_, favorite0_.Comment as Comment0_0_ from webapp.ruili_favorite favorite0_ where favorite0_.FavoriteID=?
+2012-11-26 16:19:05,385 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.loader.entity.EntityLoader - Static select for entity edu.cmu.mse.rui.J2ee.HW8.DataBean.Favorite: select favorite0_.FavoriteID as FavoriteID0_, favorite0_.UserID as UserID0_0_, favorite0_.URL as URL0_0_, favorite0_.ClickCounter as ClickCou4_0_0_, favorite0_.Comment as Comment0_0_ from webapp.ruili_favorite favorite0_ where favorite0_.FavoriteID=?
+2012-11-26 16:19:05,385 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.loader.entity.EntityLoader - Static select for entity edu.cmu.mse.rui.J2ee.HW8.DataBean.Favorite: select favorite0_.FavoriteID as FavoriteID0_, favorite0_.UserID as UserID0_0_, favorite0_.URL as URL0_0_, favorite0_.ClickCounter as ClickCou4_0_0_, favorite0_.Comment as Comment0_0_ from webapp.ruili_favorite favorite0_ where favorite0_.FavoriteID=? for update
+2012-11-26 16:19:05,386 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.loader.entity.EntityLoader - Static select for entity edu.cmu.mse.rui.J2ee.HW8.DataBean.Favorite: select favorite0_.FavoriteID as FavoriteID0_, favorite0_.UserID as UserID0_0_, favorite0_.URL as URL0_0_, favorite0_.ClickCounter as ClickCou4_0_0_, favorite0_.Comment as Comment0_0_ from webapp.ruili_favorite favorite0_ where favorite0_.FavoriteID=? for update
+2012-11-26 16:19:05,386 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.loader.entity.EntityLoader - Static select for entity edu.cmu.mse.rui.J2ee.HW8.DataBean.User: select user0_.UserID as UserID0_, user0_.EmailAdd as EmailAdd1_0_, user0_.FirstName as FirstName1_0_, user0_.LastName as LastName1_0_, user0_.Password as Password1_0_ from webapp.ruili_user user0_ where user0_.UserID=?
+2012-11-26 16:19:05,386 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.loader.entity.EntityLoader - Static select for entity edu.cmu.mse.rui.J2ee.HW8.DataBean.User: select user0_.UserID as UserID0_, user0_.EmailAdd as EmailAdd1_0_, user0_.FirstName as FirstName1_0_, user0_.LastName as LastName1_0_, user0_.Password as Password1_0_ from webapp.ruili_user user0_ where user0_.UserID=?
+2012-11-26 16:19:05,387 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.loader.entity.EntityLoader - Static select for entity edu.cmu.mse.rui.J2ee.HW8.DataBean.User: select user0_.UserID as UserID0_, user0_.EmailAdd as EmailAdd1_0_, user0_.FirstName as FirstName1_0_, user0_.LastName as LastName1_0_, user0_.Password as Password1_0_ from webapp.ruili_user user0_ where user0_.UserID=? for update
+2012-11-26 16:19:05,387 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.loader.entity.EntityLoader - Static select for entity edu.cmu.mse.rui.J2ee.HW8.DataBean.User: select user0_.UserID as UserID0_, user0_.EmailAdd as EmailAdd1_0_, user0_.FirstName as FirstName1_0_, user0_.LastName as LastName1_0_, user0_.Password as Password1_0_ from webapp.ruili_user user0_ where user0_.UserID=? for update
+2012-11-26 16:19:05,389 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.impl.SessionFactoryObjectFactory - initializing class SessionFactoryObjectFactory
+2012-11-26 16:19:05,390 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.impl.SessionFactoryObjectFactory - registered: 006d69883b3e9671013b3e9672ab0000 (unnamed)
+2012-11-26 16:19:05,390 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.impl.SessionFactoryObjectFactory - Not binding factory to JNDI, no JNDI name configured
+2012-11-26 16:19:05,390 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.impl.SessionFactoryImpl - instantiated session factory
+2012-11-26 16:19:05,392 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.dialect.Dialect - Using dialect: org.hibernate.dialect.MySQLDialect
+2012-11-26 16:19:05,393 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.cfg.Configuration - processing extends queue
+2012-11-26 16:19:05,393 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.cfg.Configuration - processing collection mappings
+2012-11-26 16:19:05,394 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.cfg.Configuration - processing association property references
+2012-11-26 16:19:05,394 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.cfg.Configuration - processing foreign key constraints
+2012-11-26 16:19:05,394 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.cfg.Configuration - processing extends queue
+2012-11-26 16:19:05,394 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.cfg.Configuration - processing collection mappings
+2012-11-26 16:19:05,395 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.cfg.Configuration - processing association property references
+2012-11-26 16:19:05,395 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.cfg.Configuration - processing foreign key constraints
+2012-11-26 16:19:05,395 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.tool.hbm2ddl.SchemaExport - Running hbm2ddl schema export
+2012-11-26 16:19:05,395 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.tool.hbm2ddl.SchemaExport - exporting generated schema to database
+2012-11-26 16:19:05,396 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.connection.DriverManagerConnectionProvider - Using Hibernate built-in connection pool (not for production use!)
+2012-11-26 16:19:05,396 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.connection.DriverManagerConnectionProvider - Hibernate connection pool size: 20
+2012-11-26 16:19:05,396 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.connection.DriverManagerConnectionProvider - autocommit mode: true
+2012-11-26 16:19:05,396 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.connection.DriverManagerConnectionProvider - using driver: com.mysql.jdbc.Driver at URL: jdbc:mysql://localhost:3306/webapp
+2012-11-26 16:19:05,396 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.connection.DriverManagerConnectionProvider - connection properties: {user=root, autocommit=true}
+2012-11-26 16:19:05,397 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.connection.DriverManagerConnectionProvider - total checked-out connections: 0
+2012-11-26 16:19:05,397 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.connection.DriverManagerConnectionProvider - opening new JDBC connection
+2012-11-26 16:19:05,412 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.connection.DriverManagerConnectionProvider - created connection to: jdbc:mysql://localhost:3306/webapp, Isolation Level: 4
+2012-11-26 16:19:05,413 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.tool.hbm2ddl.SchemaExport - drop table if exists webapp.ruili_favorite
+2012-11-26 16:19:05,418 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.tool.hbm2ddl.SchemaExport - drop table if exists webapp.ruili_user
+2012-11-26 16:19:05,419 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.tool.hbm2ddl.SchemaExport - create table webapp.ruili_favorite (
+    FavoriteID integer not null,
+    UserID integer,
+    URL varchar(30),
+    ClickCounter integer,
+    Comment varchar(40),
+    primary key (FavoriteID)
+)
+2012-11-26 16:19:05,438 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.tool.hbm2ddl.SchemaExport - create table webapp.ruili_user (
+    UserID integer not null,
+    EmailAdd varchar(30),
+    FirstName varchar(30),
+    LastName varchar(30),
+    Password varchar(15),
+    primary key (UserID)
+)
+2012-11-26 16:19:05,456 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.tool.hbm2ddl.SchemaExport - schema export complete
+2012-11-26 16:19:05,457 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.connection.DriverManagerConnectionProvider - returning connection to pool, pool size: 1
+2012-11-26 16:19:05,457 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.connection.DriverManagerConnectionProvider - cleaning up connection pool: jdbc:mysql://localhost:3306/webapp
+2012-11-26 16:19:05,458 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.dialect.Dialect - Using dialect: org.hibernate.dialect.MySQLDialect
+2012-11-26 16:19:05,459 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.cfg.Configuration - processing extends queue
+2012-11-26 16:19:05,459 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.cfg.Configuration - processing collection mappings
+2012-11-26 16:19:05,459 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.cfg.Configuration - processing association property references
+2012-11-26 16:19:05,459 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.cfg.Configuration - processing foreign key constraints
+2012-11-26 16:19:05,460 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.cfg.Configuration - processing extends queue
+2012-11-26 16:19:05,460 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.cfg.Configuration - processing collection mappings
+2012-11-26 16:19:05,460 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.cfg.Configuration - processing association property references
+2012-11-26 16:19:05,460 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.cfg.Configuration - processing foreign key constraints
+2012-11-26 16:19:05,461 { yyyy MMM dd HH:mm:ss } INFO  org.hibernate.impl.SessionFactoryImpl - Checking 0 named queries
+2012-11-26 16:19:05,476 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.impl.SessionImpl - opened session at timestamp: 13539647454
+2012-11-26 16:19:05,477 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.transaction.JDBCTransaction - begin
+2012-11-26 16:19:05,478 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.jdbc.ConnectionManager - opening JDBC connection
+2012-11-26 16:19:05,478 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.connection.DriverManagerConnectionProvider - total checked-out connections: 0
+2012-11-26 16:19:05,478 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.connection.DriverManagerConnectionProvider - using pooled JDBC connection, pool size: 0
+2012-11-26 16:19:05,479 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.transaction.JDBCTransaction - current autocommit status: true
+2012-11-26 16:19:05,479 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.transaction.JDBCTransaction - disabling autocommit
+2012-11-26 16:19:05,481 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.DefaultSaveOrUpdateEventListener - saving transient instance
+2012-11-26 16:19:05,481 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.id.IncrementGenerator - fetching initial value: select max(UserID) from ruili_user
+2012-11-26 16:19:05,481 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.SQL - select max(UserID) from ruili_user
+2012-11-26 16:19:05,491 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.id.IncrementGenerator - first free id: 1
+2012-11-26 16:19:05,491 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractSaveEventListener - generated identifier: 1, using strategy: org.hibernate.id.IncrementGenerator
+2012-11-26 16:19:05,492 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractSaveEventListener - saving [edu.cmu.mse.rui.J2ee.HW8.DataBean.User#1]
+2012-11-26 16:19:05,497 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.transaction.JDBCTransaction - commit
+2012-11-26 16:19:05,497 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.impl.SessionImpl - automatically flushing session
+2012-11-26 16:19:05,498 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - flushing session
+2012-11-26 16:19:05,498 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - processing flush-time cascades
+2012-11-26 16:19:05,498 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - dirty checking collections
+2012-11-26 16:19:05,498 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - Flushing entities and processing referenced collections
+2012-11-26 16:19:05,499 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - Processing unreferenced collections
+2012-11-26 16:19:05,499 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - Scheduling collection removes/(re)creates/updates
+2012-11-26 16:19:05,500 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - Flushed: 1 insertions, 0 updates, 0 deletions to 1 objects
+2012-11-26 16:19:05,500 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+2012-11-26 16:19:05,501 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.pretty.Printer - listing entities:
+2012-11-26 16:19:05,501 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.pretty.Printer - edu.cmu.mse.rui.J2ee.HW8.DataBean.User{lastName=null, userId=1, firstName=null, password=pasw, emailAdd=ruiliwonder}
+2012-11-26 16:19:05,501 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - executing flush
+2012-11-26 16:19:05,501 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.persister.entity.BasicEntityPersister - Inserting entity: [edu.cmu.mse.rui.J2ee.HW8.DataBean.User#1]
+2012-11-26 16:19:05,502 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.jdbc.AbstractBatcher - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+2012-11-26 16:19:05,502 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.SQL - insert into webapp.ruili_user (EmailAdd, FirstName, LastName, Password, UserID) values (?, ?, ?, ?, ?)
+2012-11-26 16:19:05,502 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.jdbc.AbstractBatcher - preparing statement
+2012-11-26 16:19:05,503 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.persister.entity.BasicEntityPersister - Dehydrating entity: [edu.cmu.mse.rui.J2ee.HW8.DataBean.User#1]
+2012-11-26 16:19:05,503 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.type.StringType - binding 'ruiliwonder' to parameter: 1
+2012-11-26 16:19:05,503 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.type.StringType - binding null to parameter: 2
+2012-11-26 16:19:05,504 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.type.StringType - binding null to parameter: 3
+2012-11-26 16:19:05,504 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.type.StringType - binding 'pasw' to parameter: 4
+2012-11-26 16:19:05,504 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.type.IntegerType - binding '1' to parameter: 5
+2012-11-26 16:19:05,504 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.jdbc.AbstractBatcher - Adding to batch
+2012-11-26 16:19:05,505 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.jdbc.AbstractBatcher - Executing batch size: 1
+2012-11-26 16:19:05,506 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.jdbc.AbstractBatcher - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+2012-11-26 16:19:05,506 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.jdbc.AbstractBatcher - closing statement
+2012-11-26 16:19:05,506 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - post flush
+2012-11-26 16:19:05,507 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.jdbc.JDBCContext - before transaction completion
+2012-11-26 16:19:05,507 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.impl.SessionImpl - before transaction completion
+2012-11-26 16:19:05,507 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.transaction.JDBCTransaction - re-enabling autocommit
+2012-11-26 16:19:05,508 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.transaction.JDBCTransaction - committed JDBC Connection
+2012-11-26 16:19:05,508 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.jdbc.JDBCContext - after transaction completion
+2012-11-26 16:19:05,508 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.impl.SessionImpl - after transaction completion
+2012-11-26 16:19:05,508 { yyyy MMM dd HH:mm:ss } DEBUG edu.cmu.mse.rui.J2ee.HW8.DAO.UserDAO - save successful
+2012-11-26 16:19:05,509 { yyyy MMM dd HH:mm:ss } DEBUG edu.cmu.mse.rui.J2ee.HW8.DAO.FavoriteDAO - saving Favorite instance
+2012-11-26 16:19:05,509 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.transaction.JDBCTransaction - begin
+2012-11-26 16:19:05,509 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.transaction.JDBCTransaction - current autocommit status: true
+2012-11-26 16:19:05,509 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.transaction.JDBCTransaction - disabling autocommit
+2012-11-26 16:19:05,510 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.DefaultSaveOrUpdateEventListener - saving transient instance
+2012-11-26 16:19:05,510 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.id.IncrementGenerator - fetching initial value: select max(FavoriteID) from ruili_favorite
+2012-11-26 16:19:05,510 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.SQL - select max(FavoriteID) from ruili_favorite
+2012-11-26 16:19:05,511 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.id.IncrementGenerator - first free id: 1
+2012-11-26 16:19:05,511 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractSaveEventListener - generated identifier: 1, using strategy: org.hibernate.id.IncrementGenerator
+2012-11-26 16:19:05,511 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractSaveEventListener - saving [edu.cmu.mse.rui.J2ee.HW8.DataBean.Favorite#1]
+2012-11-26 16:19:05,511 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.transaction.JDBCTransaction - commit
+2012-11-26 16:19:05,512 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.impl.SessionImpl - automatically flushing session
+2012-11-26 16:19:05,512 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - flushing session
+2012-11-26 16:19:05,512 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - processing flush-time cascades
+2012-11-26 16:19:05,512 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - dirty checking collections
+2012-11-26 16:19:05,512 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - Flushing entities and processing referenced collections
+2012-11-26 16:19:05,512 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - Processing unreferenced collections
+2012-11-26 16:19:05,512 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - Scheduling collection removes/(re)creates/updates
+2012-11-26 16:19:05,513 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - Flushed: 1 insertions, 0 updates, 0 deletions to 2 objects
+2012-11-26 16:19:05,513 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.event.def.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+2012-11-26 16:19:05,513 { yyyy MMM dd HH:mm:ss } DEBUG org.hibernate.pretty.Printer - listing entities:

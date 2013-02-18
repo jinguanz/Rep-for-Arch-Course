@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Struts2Diagram version="2.0">
+  <package name="Struts2" location="60,178" size="420,210">
+    <action name="Login" location="209,65" size="150,104">
+      <result name="login">
+        <resourceEdge source="login" routing="0" target="favorite.jsp" />
+      </result>
+      <result name="ToRegister">
+        <resourceEdge source="ToRegister" routing="0" target="register.jsp" />
+      </result>
+      <result name="failure">
+        <resourceEdge source="failure" routing="0" target="login.jsp" />
+      </result>
+      <result name="complateRegister">
+        <resourceEdge source="complateRegister" routing="0" target="favorite.jsp" />
+      </result>
+    </action>
+    <action name="Favorite" location="34,22" size="150,83">
+      <result name="Add Favorite Success">
+        <resourceEdge source="Add Favorite Success" routing="0" target="favorite.jsp" />
+      </result>
+      <result name="retreive  All Favorite  Success">
+        <resourceEdge source="retreive  All Favorite  Success" routing="0" target="favorite.jsp" />
+      </result>
+      <result name="retreive  All Favorite  Success for current user">
+        <resourceEdge source="retreive  All Favorite  Success for current user" routing="0" target="favorite.jsp" />
+      </result>
+    </action>
+  </package>
+  <webResource name="favorite.jsp" path="/favorite.jsp" location="20,10" size="150,55" />
+  <webResource name="register.jsp" path="/register.jsp" location="265,80" size="150,55" />
+  <webResource name="login.jsp" path="/login.jsp" location="545,255" size="150,55" />
+</Struts2Diagram>
+

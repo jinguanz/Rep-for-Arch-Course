@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="Struts2" namespace="/" extends="struts-default">
+
+		<action name="Login" class="edu.cmu.mse.rui.J2EE.HW9.StructsAction.Login">
+			<result name="login">/favorite2.jsp</result>
+			<result name="ToRegister">/register.jsp</result>
+			<result name="login failure">/login.jsp</result>
+			<result name="complateRegister">/favorite2.jsp</result>
+			<result name="login success">/favorite2.jsp</result>
+			<result name="logoutSuccess">/login.jsp</result>
+			<result name="change password fail">/login.jsp</result>
+			<result name="change password success">/login.jsp</result>
+			<result name="fail to register">/login.jsp</result>
+		</action>
+
+		<action name="Favorite"
+			class="edu.cmu.mse.rui.J2EE.HW9.StructsAction.FavoriteMgt">
+			<result name="Add Favorite Success">/favorite2.jsp</result>
+			<result name="retreive  All Favorite  Success">/allfavorite.jsp</result>
+			<result name="retreive  All Favorite  Success for current user">/favorite2.jsp</result>
+			<result name="delete Favorite Success">/favorite2.jsp</result>
+			<result name="click Favorite Success">/favorite2.jsp</result>
+			<result name="Fail to add favorite">/favorite2.jsp</result>
+
+		</action>
+
+		<action name="Click"
+			class="edu.cmu.mse.rui.J2EE.HW9.StructsAction.FavoriteClick">
+			<result name="click success in view all">/allfavorite.jsp</result>
+
+		</action>
+
+
+
+	</package>
+</struts>    

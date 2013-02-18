@@ -1,0 +1,25 @@
+#MyEclipse Hibernate Properties
+#Thu Nov 22 15:01:15 EST 2012
+sessionFactoryName=cmu.edu.mse.rui.J2ee.HW8.Hibernate.HibernateSessionFactory
+genBasicCompId=false
+profile=
+daoSFId=
+version=3.0
+jndiPath=
+detectM2M=false
+reStrategyClass=
+detectO2O=false
+springDaoFile=
+useJavaTypes=true
+keyGenerator=
+libInstallFolder=WebRoot/WEB-INF/lib
+addLibs2Project=true
+genVersionTag=false
+sessionFactoryId=
+basePersistenceClass=
+genAnnotations=false
+reSettingsFile=/HW8/hibernate.reveng.xml
+configFile=/HW8/src/hibernate.cfg.xml
+createConfigFile=true
+addLibs2Classpath=true
+baseDaoClass=BaseHibernateDAO
