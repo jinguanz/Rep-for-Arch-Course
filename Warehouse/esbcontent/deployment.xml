@@ -1,5 +1,0 @@
-<?xml version="1.0"?>
-<jbossesb-deployment>
-  <jmsQueue>warehouse_Request_esb</jmsQueue>
-  <jmsQueue>warehouse_Request_gw</jmsQueue>
-</jbossesb-deployment>
